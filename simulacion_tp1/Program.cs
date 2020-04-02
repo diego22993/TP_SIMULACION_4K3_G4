@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace simulacion_tp1
 {
     static class Program
-    {
+    {////
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
