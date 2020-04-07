@@ -28,9 +28,9 @@ namespace simulacion_tp1
         {
             limpiarCampos();
             txtX.Enabled = true;
-            txtA.Enabled = true;
+            txtK.Enabled = true;
             txtC.Enabled = true;
-            txtM.Enabled = true;
+            txtG.Enabled = true;
             tipo = "lineal";
         }
 
@@ -38,10 +38,10 @@ namespace simulacion_tp1
         {
             limpiarCampos();
             txtX.Enabled = true;
-            txtA.Enabled = true;
+            txtK.Enabled = true;
             txtC.Enabled = false;
             txtC.Text = "0";
-            txtM.Enabled = true;
+            txtG.Enabled = true;
             tipo = "multiplicativo";
         }
 
@@ -49,46 +49,86 @@ namespace simulacion_tp1
         {
             limpiarCampos();
             txtX.Enabled = false;
-            txtA.Enabled = false;
+            txtK.Enabled = false;
             txtC.Enabled = false;
-            txtM.Enabled = false;
+            txtG.Enabled = false;
             tipo = "lenguaje";
         }
 
         private void limpiarCampos()
         {
             txtX.Text = "";
-            txtA.Text = "";
+            txtK.Text = "";
             txtC.Text = "";
-            txtM.Text = "";
+            txtG.Text = "";
             txtTamanio.Text = "";
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            List<NroRandom> lista = new List<NroRandom>();
-            int x;
-            int tamanio = int.Parse(txtTamanio.Text);
-
-            switch (tipo)
+            if (isValid())
             {
-                case "lineal":
-                    generador = new Generador(int.Parse(txtA.Text), int.Parse(txtM.Text), int.Parse(txtC.Text));
-                    x = int.Parse(txtX.Text);
-                    lista = generador.linealLista(x, tamanio);
-                    break;
-                case "multiplicativo":
-                    generador = new Generador(int.Parse(txtA.Text), int.Parse(txtM.Text), int.Parse(txtC.Text));
-                    x = int.Parse(txtX.Text);
-                    lista = generador.multiplicativoLista(x, tamanio);
-                    break;
-                case "lenguaje":
-                    generador = new Generador();
-                    lista = generador.lenguajeLista(tamanio);
-                    break;
-            }
+                List<NroRandom> lista = new List<NroRandom>();
+                int x;
+                int tamanio = int.Parse(txtTamanio.Text);
 
-            grilla.DataSource = lista;// tabla;
+                switch (tipo)
+                {
+                    case "lineal":
+                        generador = new Generador(int.Parse(txtK.Text), int.Parse(txtG.Text), int.Parse(txtC.Text));
+                        x = int.Parse(txtX.Text);
+                        lista = generador.linealLista(x, tamanio);
+                        break;
+                    case "multiplicativo":
+                        generador = new Generador(int.Parse(txtK.Text), int.Parse(txtG.Text), int.Parse(txtC.Text));
+                        x = int.Parse(txtX.Text);
+                        lista = generador.multiplicativoLista(x, tamanio);
+                        break;
+                    case "lenguaje":
+                        generador = new Generador();
+                        lista = generador.lenguajeLista(tamanio);
+                        break;
+                }
+
+                grilla.DataSource = lista;// tabla;
+            }
+            else {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+          
+        }
+
+        private bool isValid() {
+            return txtX.Text != "" && txtK.Text != "" &&  txtC.Text != "" && txtG.Text != "" && txtTamanio.Text != "";
+        }
+ 
+        private void txtK_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtK);
+        }
+
+        private void txtG_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtG);
+        }
+
+        private void txtC_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtC);
+        }
+
+        private void txtX_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtX);
+        }
+
+        private void showErrorMessage(TextBox textbox)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textbox.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Por favor ingrese solo números enteros.");
+                textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
+            }
         }
     }
 }

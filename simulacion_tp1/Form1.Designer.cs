@@ -34,9 +34,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtM = new System.Windows.Forms.TextBox();
+            this.txtG = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
-            this.txtA = new System.Windows.Forms.TextBox();
+            this.txtK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtX = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,8 +47,8 @@
             this.posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.random = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.cmbIntervalo = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -61,27 +61,30 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtM);
+            this.groupBox1.Controls.Add(this.txtG);
             this.groupBox1.Controls.Add(this.txtC);
-            this.groupBox1.Controls.Add(this.txtA);
+            this.groupBox1.Controls.Add(this.txtK);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtX);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.rbLenguaje);
             this.groupBox1.Controls.Add(this.rbMultiplicativo);
             this.groupBox1.Controls.Add(this.rbLineal);
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(10, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(268, 214);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(201, 174);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parámetros";
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(98, 178);
+            this.btnGenerar.Location = new System.Drawing.Point(74, 145);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.Size = new System.Drawing.Size(56, 19);
             this.btnGenerar.TabIndex = 13;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
@@ -89,90 +92,105 @@
             // 
             // txtTamanio
             // 
-            this.txtTamanio.Location = new System.Drawing.Point(90, 135);
+            this.txtTamanio.Location = new System.Drawing.Point(68, 110);
+            this.txtTamanio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTamanio.Name = "txtTamanio";
-            this.txtTamanio.Size = new System.Drawing.Size(35, 22);
+            this.txtTamanio.Size = new System.Drawing.Size(27, 20);
             this.txtTamanio.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 138);
+            this.label5.Location = new System.Drawing.Point(5, 112);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Tamaño";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(193, 109);
+            this.label4.Location = new System.Drawing.Point(145, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 17);
+            this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "m";
+            this.label4.Text = "g";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 109);
+            this.label3.Location = new System.Drawing.Point(98, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 17);
+            this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "c";
             // 
-            // txtM
+            // txtG
             // 
-            this.txtM.Location = new System.Drawing.Point(218, 106);
-            this.txtM.Name = "txtM";
-            this.txtM.Size = new System.Drawing.Size(35, 22);
-            this.txtM.TabIndex = 8;
+            this.txtG.Location = new System.Drawing.Point(164, 86);
+            this.txtG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtG.Name = "txtG";
+            this.txtG.Size = new System.Drawing.Size(27, 20);
+            this.txtG.TabIndex = 8;
+            this.txtG.TextChanged += new System.EventHandler(this.txtG_TextChanged);
             // 
             // txtC
             // 
-            this.txtC.Location = new System.Drawing.Point(152, 106);
+            this.txtC.Location = new System.Drawing.Point(114, 86);
+            this.txtC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(35, 22);
+            this.txtC.Size = new System.Drawing.Size(27, 20);
             this.txtC.TabIndex = 7;
+            this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
             // 
-            // txtA
+            // txtK
             // 
-            this.txtA.Location = new System.Drawing.Point(90, 106);
-            this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(35, 22);
-            this.txtA.TabIndex = 6;
+            this.txtK.Location = new System.Drawing.Point(68, 86);
+            this.txtK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtK.Name = "txtK";
+            this.txtK.Size = new System.Drawing.Size(27, 20);
+            this.txtK.TabIndex = 6;
+            this.txtK.TextChanged += new System.EventHandler(this.txtK_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 109);
+            this.label2.Location = new System.Drawing.Point(51, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 17);
+            this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "a";
+            this.label2.Text = "k";
             // 
             // txtX
             // 
-            this.txtX.Location = new System.Drawing.Point(27, 106);
+            this.txtX.Location = new System.Drawing.Point(20, 86);
+            this.txtX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtX.Name = "txtX";
-            this.txtX.Size = new System.Drawing.Size(35, 22);
+            this.txtX.Size = new System.Drawing.Size(27, 20);
             this.txtX.TabIndex = 4;
+            this.txtX.TextChanged += new System.EventHandler(this.txtX_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 109);
+            this.label1.Location = new System.Drawing.Point(5, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 17);
+            this.label1.Size = new System.Drawing.Size(12, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "x";
             // 
             // rbLenguaje
             // 
             this.rbLenguaje.AutoSize = true;
-            this.rbLenguaje.Location = new System.Drawing.Point(7, 78);
+            this.rbLenguaje.Location = new System.Drawing.Point(5, 63);
+            this.rbLenguaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbLenguaje.Name = "rbLenguaje";
-            this.rbLenguaje.Size = new System.Drawing.Size(88, 21);
+            this.rbLenguaje.Size = new System.Drawing.Size(69, 17);
             this.rbLenguaje.TabIndex = 2;
             this.rbLenguaje.TabStop = true;
             this.rbLenguaje.Text = "Lenguaje";
@@ -182,9 +200,10 @@
             // rbMultiplicativo
             // 
             this.rbMultiplicativo.AutoSize = true;
-            this.rbMultiplicativo.Location = new System.Drawing.Point(7, 50);
+            this.rbMultiplicativo.Location = new System.Drawing.Point(5, 41);
+            this.rbMultiplicativo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbMultiplicativo.Name = "rbMultiplicativo";
-            this.rbMultiplicativo.Size = new System.Drawing.Size(109, 21);
+            this.rbMultiplicativo.Size = new System.Drawing.Size(86, 17);
             this.rbMultiplicativo.TabIndex = 1;
             this.rbMultiplicativo.TabStop = true;
             this.rbMultiplicativo.Text = "Multiplicativo";
@@ -194,9 +213,10 @@
             // rbLineal
             // 
             this.rbLineal.AutoSize = true;
-            this.rbLineal.Location = new System.Drawing.Point(7, 22);
+            this.rbLineal.Location = new System.Drawing.Point(5, 18);
+            this.rbLineal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbLineal.Name = "rbLineal";
-            this.rbLineal.Size = new System.Drawing.Size(67, 21);
+            this.rbLineal.Size = new System.Drawing.Size(53, 17);
             this.rbLineal.TabIndex = 0;
             this.rbLineal.TabStop = true;
             this.rbLineal.Text = "Lineal";
@@ -211,13 +231,14 @@
             this.grilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.posicion,
             this.random});
-            this.grilla.Location = new System.Drawing.Point(287, 12);
+            this.grilla.Location = new System.Drawing.Point(215, 10);
+            this.grilla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grilla.Name = "grilla";
             this.grilla.ReadOnly = true;
             this.grilla.RowHeadersWidth = 51;
             this.grilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grilla.RowTemplate.Height = 24;
-            this.grilla.Size = new System.Drawing.Size(337, 214);
+            this.grilla.Size = new System.Drawing.Size(253, 174);
             this.grilla.TabIndex = 2;
             // 
             // posicion
@@ -244,40 +265,45 @@
             // 
             this.groupBox2.Controls.Add(this.cmbIntervalo);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(13, 232);
+            this.groupBox2.Location = new System.Drawing.Point(10, 188);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(611, 400);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(458, 325);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Histograma";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 17);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Intervalos";
             // 
             // cmbIntervalo
             // 
             this.cmbIntervalo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIntervalo.FormattingEnabled = true;
-            this.cmbIntervalo.Location = new System.Drawing.Point(90, 21);
+            this.cmbIntervalo.Location = new System.Drawing.Point(68, 17);
+            this.cmbIntervalo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbIntervalo.Name = "cmbIntervalo";
-            this.cmbIntervalo.Size = new System.Drawing.Size(121, 24);
+            this.cmbIntervalo.Size = new System.Drawing.Size(92, 21);
             this.cmbIntervalo.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Intervalos";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(637, 644);
+            this.ClientSize = new System.Drawing.Size(478, 523);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grilla);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Generado de números aleatorios";
@@ -298,9 +324,9 @@
         private System.Windows.Forms.RadioButton rbLineal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtM;
+        private System.Windows.Forms.TextBox txtG;
         private System.Windows.Forms.TextBox txtC;
-        private System.Windows.Forms.TextBox txtA;
+        private System.Windows.Forms.TextBox txtK;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtX;
         private System.Windows.Forms.Label label1;

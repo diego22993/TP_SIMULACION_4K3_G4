@@ -8,8 +8,8 @@ namespace simulacion_tp1
 {
     class Generador
     {
-        private int a;
-        private int m;
+        private int k;
+        private int g;
         private int c;
         private Random random = new Random();
 
@@ -18,17 +18,19 @@ namespace simulacion_tp1
             
         }
 
-        public Generador(int a, int m, int c)
+        public Generador(int k, int g, int c)
         {
-            this.a = a;
-            this.m = m;
+            this.k = k;
+            this.g = g;
             this.c = c;
         }
 
         public NroRandom lineal(int x)
         {
-            int xi = (a * x + c) % m;
-            NroRandom nroRnd = new NroRandom(x, xi, dividir(xi));
+            int a = 1 + (4 * k);
+            double m = Math.Pow(2, g);
+            int xi = Convert.ToInt32((a * x + c) % m);
+            NroRandom nroRnd = new NroRandom(x, xi, dividir(xi, m));
             return nroRnd;
         }
 
@@ -48,8 +50,10 @@ namespace simulacion_tp1
 
         public NroRandom multiplicativo(int x)
         {
-            int xi = (a * x) % m;
-            NroRandom nroRnd = new NroRandom(x, xi, dividir(xi));
+            int a = 3 + (8 * k);
+            double m = Math.Pow(2, g);
+            int xi = Convert.ToInt32((a * x) % m);
+            NroRandom nroRnd = new NroRandom(x, xi, dividir(xi, m));
             return nroRnd;
         }
 
@@ -89,9 +93,9 @@ namespace simulacion_tp1
             return lista;
         }
 
-        private double dividir(int nro)
+        private double dividir(int nro, double m)
         {
-            double resultado = (double) nro / (m - 1);
+            double resultado = (double) nro / m; // se borra el m - 1 para no incluirlo en la lista de randoms 
             return Math.Round(resultado, 4, MidpointRounding.AwayFromZero);
         }
     }
