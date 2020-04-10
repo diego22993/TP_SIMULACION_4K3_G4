@@ -17,7 +17,7 @@ namespace simulacion_tp1
         private Generador generador;
         List<NroRandom> lista = new List<NroRandom>();
         int tamanio;
-        List<Intervalo> intervalos;// = new List<Intervalo>();
+        List<Intervalo> intervalos;
 
         public Form1()
         {
@@ -25,6 +25,11 @@ namespace simulacion_tp1
             cmbIntervalo.Items.Add("10");
             cmbIntervalo.Items.Add("15");
             cmbIntervalo.Items.Add("20");
+            chrGrafico.Titles.Add("Histograma de Frecuencias");
+            chrGrafico.ChartAreas[0].AxisX.Title = "Intervalos";
+            chrGrafico.ChartAreas[0].AxisY.Title = "Números Random";
+            chrGrafico.Series[0].LegendText = "Fo";
+            chrGrafico.Series[1].LegendText = "Fe";
         }
 
         private void rbLineal_CheckedChanged(object sender, EventArgs e)
@@ -204,9 +209,7 @@ namespace simulacion_tp1
                 fe.Add(intervalos[i].Fe);
             }
             chrGrafico.Series[0].Points.DataBindY(fo);
-            chrGrafico.Series[0].LegendText = "Fo";
             chrGrafico.Series[1].Points.DataBindXY(serieFe, fe);
-            chrGrafico.Series[1].LegendText = "Fe";
         }
 
     }

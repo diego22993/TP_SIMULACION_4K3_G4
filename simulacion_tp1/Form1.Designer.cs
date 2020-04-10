@@ -32,8 +32,12 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenerar = new System.Windows.Forms.Button();
+            this.grilla = new System.Windows.Forms.DataGridView();
+            this.posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.random = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTamanio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,20 +51,17 @@
             this.rbLenguaje = new System.Windows.Forms.RadioButton();
             this.rbMultiplicativo = new System.Windows.Forms.RadioButton();
             this.rbLineal = new System.Windows.Forms.RadioButton();
-            this.grilla = new System.Windows.Forms.DataGridView();
-            this.posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.random = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chrGrafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgvTablaFecuencia = new System.Windows.Forms.DataGridView();
             this.btnHistograma = new System.Windows.Forms.Button();
             this.cmbIntervalo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.chrGrafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaFecuencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrGrafico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaFecuencia)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -99,6 +100,44 @@
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // grilla
+            // 
+            this.grilla.AllowUserToAddRows = false;
+            this.grilla.AllowUserToDeleteRows = false;
+            this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.posicion,
+            this.random});
+            this.grilla.Location = new System.Drawing.Point(260, 17);
+            this.grilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grilla.Name = "grilla";
+            this.grilla.ReadOnly = true;
+            this.grilla.RowHeadersWidth = 51;
+            this.grilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.grilla.RowTemplate.Height = 24;
+            this.grilla.Size = new System.Drawing.Size(345, 801);
+            this.grilla.TabIndex = 2;
+            // 
+            // posicion
+            // 
+            this.posicion.DataPropertyName = "posicion";
+            this.posicion.Frozen = true;
+            this.posicion.HeaderText = "Posición";
+            this.posicion.MinimumWidth = 6;
+            this.posicion.Name = "posicion";
+            this.posicion.ReadOnly = true;
+            this.posicion.Width = 125;
+            // 
+            // random
+            // 
+            this.random.DataPropertyName = "random";
+            this.random.Frozen = true;
+            this.random.HeaderText = "Random";
+            this.random.MinimumWidth = 6;
+            this.random.Name = "random";
+            this.random.ReadOnly = true;
+            this.random.Width = 125;
             // 
             // txtTamanio
             // 
@@ -228,44 +267,6 @@
             this.rbLineal.UseVisualStyleBackColor = true;
             this.rbLineal.CheckedChanged += new System.EventHandler(this.rbLineal_CheckedChanged);
             // 
-            // grilla
-            // 
-            this.grilla.AllowUserToAddRows = false;
-            this.grilla.AllowUserToDeleteRows = false;
-            this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.posicion,
-            this.random});
-            this.grilla.Location = new System.Drawing.Point(260, 17);
-            this.grilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grilla.Name = "grilla";
-            this.grilla.ReadOnly = true;
-            this.grilla.RowHeadersWidth = 51;
-            this.grilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.grilla.RowTemplate.Height = 24;
-            this.grilla.Size = new System.Drawing.Size(345, 801);
-            this.grilla.TabIndex = 2;
-            // 
-            // posicion
-            // 
-            this.posicion.DataPropertyName = "posicion";
-            this.posicion.Frozen = true;
-            this.posicion.HeaderText = "Posición";
-            this.posicion.MinimumWidth = 6;
-            this.posicion.Name = "posicion";
-            this.posicion.ReadOnly = true;
-            this.posicion.Width = 125;
-            // 
-            // random
-            // 
-            this.random.DataPropertyName = "random";
-            this.random.Frozen = true;
-            this.random.HeaderText = "Random";
-            this.random.MinimumWidth = 6;
-            this.random.Name = "random";
-            this.random.ReadOnly = true;
-            this.random.Width = 125;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.chrGrafico);
@@ -282,11 +283,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Histograma";
             // 
+            // chrGrafico
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chrGrafico.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrGrafico.Legends.Add(legend1);
+            this.chrGrafico.Location = new System.Drawing.Point(6, 368);
+            this.chrGrafico.Name = "chrGrafico";
+            this.chrGrafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series2";
+            this.chrGrafico.Series.Add(series1);
+            this.chrGrafico.Series.Add(series2);
+            this.chrGrafico.Size = new System.Drawing.Size(891, 451);
+            this.chrGrafico.TabIndex = 4;
+            this.chrGrafico.Text = "chart1";
+            title1.Name = "Histograma de frecuencias";
+            this.chrGrafico.Titles.Add(title1);
+            // 
             // dgvTablaFecuencia
             // 
             this.dgvTablaFecuencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablaFecuencia.Location = new System.Drawing.Point(7, 54);
-            this.dgvTablaFecuencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTablaFecuencia.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTablaFecuencia.Name = "dgvTablaFecuencia";
             this.dgvTablaFecuencia.RowHeadersWidth = 51;
             this.dgvTablaFecuencia.Size = new System.Drawing.Size(890, 307);
@@ -295,7 +319,7 @@
             // btnHistograma
             // 
             this.btnHistograma.Location = new System.Drawing.Point(219, 19);
-            this.btnHistograma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistograma.Margin = new System.Windows.Forms.Padding(4);
             this.btnHistograma.Name = "btnHistograma";
             this.btnHistograma.Size = new System.Drawing.Size(100, 28);
             this.btnHistograma.TabIndex = 2;
@@ -322,26 +346,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Intervalos";
             // 
-            // chrGrafico
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chrGrafico.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chrGrafico.Legends.Add(legend1);
-            this.chrGrafico.Location = new System.Drawing.Point(6, 368);
-            this.chrGrafico.Name = "chrGrafico";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series2";
-            this.chrGrafico.Series.Add(series1);
-            this.chrGrafico.Series.Add(series2);
-            this.chrGrafico.Size = new System.Drawing.Size(891, 451);
-            this.chrGrafico.TabIndex = 4;
-            this.chrGrafico.Text = "chart1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,8 +363,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaFecuencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrGrafico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaFecuencia)).EndInit();
             this.ResumeLayout(false);
 
         }
