@@ -30,6 +30,8 @@ namespace simulacion_tp1
             int a = 1 + (4 * k);
             double m = Math.Pow(2, g);
             int xi = Convert.ToInt32((a * x + c) % m);
+            //double mi = m - 1; 
+            //NroRandom nroRnd = new NroRandom(x, xi, dividir(xi, mi));
             NroRandom nroRnd = new NroRandom(x, xi, dividir(xi, m));
             return nroRnd;
         }
@@ -53,6 +55,8 @@ namespace simulacion_tp1
             int a = 3 + (8 * k);
             double m = Math.Pow(2, g);
             int xi = Convert.ToInt32((a * x) % m);
+            //double mi = m - 1;
+            //NroRandom nroRnd = new NroRandom(x, xi, dividir(xi, mi));
             NroRandom nroRnd = new NroRandom(x, xi, dividir(xi, m));
             return nroRnd;
         }
