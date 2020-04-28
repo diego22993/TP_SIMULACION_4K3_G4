@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIM_G7_TP1.Properties {
+namespace SIM_G4_TP3.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

@@ -7,8 +7,8 @@
     <ProjectGuid>{CF692A62-8153-4B9F-91FD-3640A110D118}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIM_G7_TP1</RootNamespace>
-    <AssemblyName>SIM-G7-TP1</AssemblyName>
+    <RootNamespace>SIM_G4_TP3</RootNamespace>
+    <AssemblyName>SIM-G4-TP3</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>

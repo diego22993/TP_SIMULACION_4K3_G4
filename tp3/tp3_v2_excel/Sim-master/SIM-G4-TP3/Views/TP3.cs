@@ -1,4 +1,4 @@
-﻿using SIM_G7_TP1.Models;
+﻿using SIM_G4_TP3.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,13 +11,14 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace SIM_G7_TP1
+namespace SIM_G4_TP3
 {
     public partial class TP3 : Form
     {
         double[] randomNumbers;
         Stopwatch timer;
         List<double[]> frecuencies;
+        string distName;
 
         public TP3()
         {
@@ -56,12 +57,15 @@ namespace SIM_G7_TP1
             {
                 case 0:
                     GenerateUniformDistrib();
+                    distName = "Uniforme";
                     break;
                 case 1:
                     GenerateExponentialDistrib();
+                    distName = "Exponencial";
                     break;
                 case 2:
                     GenerateNormalDistrib();
+                    distName = "Normal";
                     break;
             }
 
@@ -71,6 +75,12 @@ namespace SIM_G7_TP1
 
         private void GenerateUniformDistrib()
         {
+
+            if (!isValid()) {
+                MessageBox.Show("Ingrese cantidad de números a generar.");
+                return;
+            }
+
             // Variables tomadas de interfaz 
             var rndNumCount = Convert.ToUInt32(nudRandomNumbersCount.Value);
             var seed = Convert.ToInt32(nudUniformDistribSeed.Value);
@@ -101,6 +111,19 @@ namespace SIM_G7_TP1
 
         private void GenerateExponentialDistrib()
         {
+
+            if (!isValid())
+            {
+                MessageBox.Show("Ingrese cantidad de números a generar.");
+                return;
+            }
+
+            if (nudExponentialDistribLambda.Value == 0)
+            {
+                MessageBox.Show("Lambda tiene que ser mayor a 0.");
+                return;
+            }
+
             var rndNumCount = Convert.ToUInt32(nudRandomNumbersCount.Value);
             var seed = Convert.ToInt32(nudExponentialDistribSeed.Value);
             var lambda = Convert.ToDouble(nudExponentialDistribLambda.Value);
@@ -118,18 +141,30 @@ namespace SIM_G7_TP1
             if (numIntervals <= 0) return;
 
             timer = Stopwatch.StartNew();
-            var frecuencias = rndGen.GenerateExponentialFrecuencies(numIntervals, lambda, randomNumbers);
+            frecuencies = rndGen.GenerateExponentialFrecuencies(numIntervals, lambda, randomNumbers);
             timer.Stop();
             lblElapsedTimeFrecuencies.Text = timer.ElapsedMilliseconds.ToString();
-            FillDbFrecuencies(frecuencias);
+            FillDbFrecuencies(frecuencies);
             gradlib.Visible = true;
-            gradlib.Text = String.Format("Grados de Libertad = {0}", (frecuencias.Count - 1));
-            fillChart(frecuencias);
+            gradlib.Text = String.Format("Grados de Libertad = {0}", (frecuencies.Count - 1));
+            fillChart(frecuencies);
         }
 
 
         private void GenerateNormalDistrib()
         {
+            if (!isValid())
+            {
+                MessageBox.Show("Ingrese cantidad de números a generar.");
+                return;
+            }
+
+            if (nudNormalDistribMedia.Value == 0)
+            {
+                MessageBox.Show("Media tiene que ser mayor a 0.");
+                return;
+            }
+
             var rndNumCount = Convert.ToUInt32(nudRandomNumbersCount.Value);
             var seed = Convert.ToInt32(nudNormalDistribSeed.Value);
             var media = Convert.ToDouble(nudNormalDistribMedia.Value);
@@ -148,13 +183,13 @@ namespace SIM_G7_TP1
             if (numIntervals <= 0) return;
 
             timer = Stopwatch.StartNew();
-            var frecuencias = rndGen.GenerateNormalFrecuencies(numIntervals, media, deviation, randomNumbers);
+            frecuencies = rndGen.GenerateNormalFrecuencies(numIntervals, media, deviation, randomNumbers);
             timer.Stop();
             lblElapsedTimeFrecuencies.Text = timer.ElapsedMilliseconds.ToString();
-            FillDbFrecuencies(frecuencias);
+            FillDbFrecuencies(frecuencies);
             gradlib.Visible = true;
-            gradlib.Text = String.Format("Grados de Libertad: {0}", (frecuencias.Count - 1));
-            fillChart(frecuencias);
+            gradlib.Text = String.Format("Grados de Libertad: {0}", (frecuencies.Count - 1));
+            fillChart(frecuencies);
         }
 
 
@@ -254,7 +289,7 @@ namespace SIM_G7_TP1
             var range = worksheet.get_Range(topLeft, bottomRight);
             chart.SetSourceData(range);
 
-            const string graphTitle = "Distribucion";
+            var graphTitle = "Distribucion " + distName;
             const string xAxis = "Intervalos";
             const string yAxis = "Frecuencia";
             // Set chart properties.
@@ -263,6 +298,11 @@ namespace SIM_G7_TP1
                 Title: graphTitle,
                 CategoryTitle: xAxis,
                 ValueTitle: yAxis);
+
+            Excel.Series fo = chart.SeriesCollection(1);
+            fo.Name = "Frecuencia observada";
+            Excel.Series fe = chart.SeriesCollection(2);
+            fe.Name = "Frecuencia esperada";
 
             var chartObj = worksheet.ChartObjects(1) as Microsoft.Office.Interop.Excel.ChartObject;
             chartObj.Activate();
@@ -289,6 +329,10 @@ namespace SIM_G7_TP1
         private void btnGraficoExcel_Click(object sender, EventArgs e)
         {
             fillExcelChart();
+        }
+
+        private Boolean isValid() {
+            return nudRandomNumbersCount.Value != 0;
         }
 
     }
