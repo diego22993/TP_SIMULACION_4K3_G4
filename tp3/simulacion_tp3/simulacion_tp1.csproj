@@ -47,19 +47,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exponencial.designer.cs">
+      <DependentUpon>Exponencial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoExponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoExponencial.designer.cs">
+      <DependentUpon>GraficoExponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoNormal.designer.cs">
+      <DependentUpon>GraficoNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoPoisson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoPoisson.designer.cs">
+      <DependentUpon>GraficoPoisson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoUniforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoUniforme.designer.cs">
+      <DependentUpon>GraficoUniforme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Intervalo.cs" />
+    <Compile Include="Normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Normal.designer.cs">
+      <DependentUpon>Normal.cs</DependentUpon>
+    </Compile>
     <Compile Include="NroRandom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Generador.cs" />
+    <EmbeddedResource Include="Exponencial.resx">
+      <DependentUpon>Exponencial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoExponencial.resx">
+      <DependentUpon>GraficoExponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoNormal.resx">
+      <DependentUpon>GraficoNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoPoisson.resx">
+      <DependentUpon>GraficoPoisson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoUniforme.resx">
+      <DependentUpon>GraficoUniforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal.resx">
+      <DependentUpon>Normal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
