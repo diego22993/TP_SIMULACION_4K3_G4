@@ -19,6 +19,9 @@ namespace SIM_G4_TP3.Models
 
         public List<double[]> GenerateCSharpRandomsList(int semilla, uint cantidad)
         {
+            // Normal de convolucion
+            // Por cada 12 nros aleatorios genera 1 con dist normal
+
             var rnd = new Random(semilla);
             return new double[cantidad].Select(x => 
                 new double[12]
@@ -39,7 +42,7 @@ namespace SIM_G4_TP3.Models
             ).ToList();
         }
 
-        public double[] GenerateUniformDistribution(uint a, uint b, double[] randoms)
+        public double[] GenerateUniformDistribution(double a, double b, double[] randoms)
         {
             return randoms.Select(x => (a + x * (b - a)).TruncateDouble(4)).ToArray();
         }
@@ -54,10 +57,12 @@ namespace SIM_G4_TP3.Models
             return randoms.Select(x => ((x.Sum() - 6) * desviacion) + media).ToArray();
         }
 
-        public List<double[]>  GenerateUniformFrecuencies(uint cantIntervalos, double[] randoms)
+        public List<double[]>  GenerateUniformFrecuencies(uint cantIntervalos, double[] randoms, double A, double B)
         {
-            var min = randoms.Min();
-            var max = randoms.Max() + 0.01;
+
+            var min = A; //intervalo min
+            var max = B; //intervalo max
+
             var intervalRange = Math.Round((max - min) / cantIntervalos, 4);
             var frecEsperada = Math.Round((double)(randoms.Length / cantIntervalos), 4);
 
@@ -67,10 +72,10 @@ namespace SIM_G4_TP3.Models
 
             for (var i = 0; i < cantIntervalos; i++)
             {
-                var interval_start = min + intervalRange * i;
+                var interval_start = min + (intervalRange * i);
                 var interval_end = interval_start + intervalRange;
                 var frec_obs = randoms.CantidadEnIntervalo(interval_start, interval_end);
-                var c = Math.Round(Math.Pow(frec_obs - frecEsperada, 2) / frecEsperada, 4);
+                var c = Math.Round(Math.Pow(frec_obs - frecEsperada, 2) / frecEsperada, 4);  
                 calcEstAcum += c;
                 a.Add(
                     new double[6]
@@ -133,13 +138,16 @@ namespace SIM_G4_TP3.Models
 
             for (var i = 0; i < cantIntervalos; i++)
             {
-                var intervalStart = min + intervalRange * i;
-                var intervalEnd = intervalStart + intervalRange;
+                var intervalStart = (min + intervalRange * i).TruncateDouble(4);
+                var intervalEnd = (intervalStart + intervalRange).TruncateDouble(4);
                 var frecObs = randoms.CantidadEnIntervalo(intervalStart, intervalEnd);
-                var frecEsperada =
-                ((1 / (desvEstandar * Math.Sqrt(2 * Math.PI))) *
-                 Math.Exp(-0.5 * (Math.Pow((((intervalEnd) + (intervalStart)) / 2 - media) / desvEstandar, 2))) *
-                 randoms.Length).TruncateDouble(4);  
+
+                var marcaClase = (intervalEnd + intervalStart) / 2;
+
+                var probabilidad = (Math.Exp(-0.5 * (Math.Pow((marcaClase - media) / desvEstandar, 2))) / (desvEstandar * Math.Sqrt(2 * Math.PI))) * intervalRange;
+
+                var frecEsperada = (probabilidad * randoms.Length).TruncateDouble(4);
+
                 var c = Math.Round(Math.Pow(frecObs - frecEsperada, 2) / frecEsperada, 4);
                 calcEstAcum += c;
                 a.Add(

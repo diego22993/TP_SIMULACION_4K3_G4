@@ -84,8 +84,8 @@ namespace SIM_G4_TP3
             // Variables tomadas de interfaz 
             var rndNumCount = Convert.ToUInt32(nudRandomNumbersCount.Value);
             var seed = Convert.ToInt32(nudUniformDistribSeed.Value);
-            var A = Convert.ToUInt32(nudUniformDistribA.Value);
-            var B = Convert.ToUInt32(nudUniformDistribB.Value);
+            var A = Convert.ToDouble(nudUniformDistribA.Value);
+            var B = Convert.ToDouble(nudUniformDistribB.Value);
             var numIntervals = Convert.ToUInt32(cmbIntervalo.Text);
 
             var rndGen = new RandomGenra2();
@@ -100,7 +100,7 @@ namespace SIM_G4_TP3
             if (numIntervals <= 0) return;
 
             timer = Stopwatch.StartNew();
-            frecuencies = rndGen.GenerateUniformFrecuencies(numIntervals, randomNumbers);
+            frecuencies = rndGen.GenerateUniformFrecuencies(numIntervals, randomNumbers, A, B);
 
             FillDbFrecuencies(frecuencies);
             gradlib.Visible = true;
@@ -146,7 +146,7 @@ namespace SIM_G4_TP3
             lblElapsedTimeFrecuencies.Text = timer.ElapsedMilliseconds.ToString();
             FillDbFrecuencies(frecuencies);
             gradlib.Visible = true;
-            gradlib.Text = String.Format("Grados de Libertad = {0}", (frecuencies.Count - 1));
+            gradlib.Text = String.Format("Grados de Libertad: {0}", (frecuencies.Count - 1));
             fillChart(frecuencies);
         }
 
@@ -234,9 +234,6 @@ namespace SIM_G4_TP3
             graficoObtenida.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Number;
             graficoObtenida.ChartAreas[0].AxisX.Minimum = frecuencias.First()[0];
             graficoObtenida.ChartAreas[0].AxisX.Maximum = frecuencias.Last()[1] + ((frecuencias.First()[1] - frecuencias.First()[0]) / 2);
-            //graficoObtenida.Series["Observada"]["PointWidth"] = (0.6).ToString();
-            //graficoObtenida.Series["Esperada"]["PointWidth"] = (0.6).ToString();
-
         }
 
         private void fillExcelChart()
@@ -255,15 +252,16 @@ namespace SIM_G4_TP3
             Excel.Workbook workbook = app.Workbooks.Add(Type.Missing);
             Excel.Worksheet worksheet = null;
 
-
-            //worksheet = workbook.Worksheets[1] as Excel.Worksheet;
             worksheet = workbook.Worksheets.get_Item(1) as Excel.Worksheet;
             worksheet.Name = "Gráfico Frecuencias";
+
+            worksheet.Columns[1].NumberFormat = "@";
 
             for (int i = 1; i <= dtgIntervalos.ColumnCount; i++)
             {
                 worksheet.Cells[1, i] = dtgIntervalos.Columns[i - 1].HeaderText.ToString();
             }
+
 
             for (int i = 0; i < frecuencies.Count; i++)
             {
@@ -273,6 +271,8 @@ namespace SIM_G4_TP3
                 worksheet.Cells[2 + i, 4] = (double)frecuencies.ElementAt(i)[4];
                 worksheet.Cells[2 + i, 5] = (double)frecuencies.ElementAt(i)[5];
             }
+
+        
 
             var topLeft = "A2";
             var bottomRight = "C" + (frecuencies.Count + 1);
@@ -299,6 +299,7 @@ namespace SIM_G4_TP3
                 CategoryTitle: xAxis,
                 ValueTitle: yAxis);
 
+            // Set name series
             Excel.Series fo = chart.SeriesCollection(1);
             fo.Name = "Frecuencia observada";
             Excel.Series fe = chart.SeriesCollection(2);
