@@ -76,6 +76,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGraficoExcel = new System.Windows.Forms.Button();
             this.gradlib = new System.Windows.Forms.Label();
+            this.gbResult = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRandomNumbersCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNumeros)).BeginInit();
@@ -94,6 +95,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graficoObtenida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntervalos)).BeginInit();
+            this.gbResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -120,7 +122,7 @@
             this.cmbIntervalo.Location = new System.Drawing.Point(124, 183);
             this.cmbIntervalo.Name = "cmbIntervalo";
             this.cmbIntervalo.Size = new System.Drawing.Size(151, 21);
-            this.cmbIntervalo.TabIndex = 14;
+            this.cmbIntervalo.TabIndex = 4;
             // 
             // lblElapsedTimeGenerator
             // 
@@ -161,7 +163,7 @@
             0});
             this.nudRandomNumbersCount.Name = "nudRandomNumbersCount";
             this.nudRandomNumbersCount.Size = new System.Drawing.Size(151, 20);
-            this.nudRandomNumbersCount.TabIndex = 6;
+            this.nudRandomNumbersCount.TabIndex = 3;
             // 
             // dtgNumeros
             // 
@@ -191,24 +193,25 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(194, 220);
+            this.btnClear.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnClear.Location = new System.Drawing.Point(194, 218);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 24);
-            this.btnClear.TabIndex = 2;
+            this.btnClear.Size = new System.Drawing.Size(123, 28);
+            this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Limpiar";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnGenerate
             // 
-            this.btnGenerate.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnGenerate.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGenerate.Location = new System.Drawing.Point(13, 212);
+            this.btnGenerate.Location = new System.Drawing.Point(9, 212);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(154, 41);
-            this.btnGenerate.TabIndex = 1;
-            this.btnGenerate.Text = "Generar";
+            this.btnGenerate.Size = new System.Drawing.Size(162, 41);
+            this.btnGenerate.TabIndex = 5;
+            this.btnGenerate.Text = "GENERAR";
             this.btnGenerate.UseVisualStyleBackColor = false;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
@@ -271,14 +274,19 @@
             // 
             // nudUniformDistribB
             // 
-            this.nudUniformDistribB.Location = new System.Drawing.Point(181, 58);
+            this.nudUniformDistribB.Location = new System.Drawing.Point(38, 56);
             this.nudUniformDistribB.Name = "nudUniformDistribB";
             this.nudUniformDistribB.Size = new System.Drawing.Size(120, 20);
             this.nudUniformDistribB.TabIndex = 2;
             // 
             // nudUniformDistribA
             // 
-            this.nudUniformDistribA.Location = new System.Drawing.Point(181, 32);
+            this.nudUniformDistribA.Location = new System.Drawing.Point(38, 30);
+            this.nudUniformDistribA.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.nudUniformDistribA.Name = "nudUniformDistribA";
             this.nudUniformDistribA.Size = new System.Drawing.Size(120, 20);
             this.nudUniformDistribA.TabIndex = 1;
@@ -286,6 +294,11 @@
             // nudUniformDistribSeed
             // 
             this.nudUniformDistribSeed.Location = new System.Drawing.Point(181, 6);
+            this.nudUniformDistribSeed.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.nudUniformDistribSeed.Name = "nudUniformDistribSeed";
             this.nudUniformDistribSeed.Size = new System.Drawing.Size(120, 20);
             this.nudUniformDistribSeed.TabIndex = 0;
@@ -327,10 +340,10 @@
             // nudExponentialDistribLambda
             // 
             this.nudExponentialDistribLambda.DecimalPlaces = 2;
-            this.nudExponentialDistribLambda.Location = new System.Drawing.Point(181, 32);
+            this.nudExponentialDistribLambda.Location = new System.Drawing.Point(33, 30);
             this.nudExponentialDistribLambda.Name = "nudExponentialDistribLambda";
             this.nudExponentialDistribLambda.Size = new System.Drawing.Size(120, 20);
-            this.nudExponentialDistribLambda.TabIndex = 8;
+            this.nudExponentialDistribLambda.TabIndex = 2;
             // 
             // nudExponentialDistribSeed
             // 
@@ -367,10 +380,10 @@
             // nudNormalDistribDeviation
             // 
             this.nudNormalDistribDeviation.DecimalPlaces = 2;
-            this.nudNormalDistribDeviation.Location = new System.Drawing.Point(184, 57);
+            this.nudNormalDistribDeviation.Location = new System.Drawing.Point(38, 55);
             this.nudNormalDistribDeviation.Name = "nudNormalDistribDeviation";
             this.nudNormalDistribDeviation.Size = new System.Drawing.Size(120, 20);
-            this.nudNormalDistribDeviation.TabIndex = 15;
+            this.nudNormalDistribDeviation.TabIndex = 1;
             // 
             // label7
             // 
@@ -384,10 +397,10 @@
             // nudNormalDistribMedia
             // 
             this.nudNormalDistribMedia.DecimalPlaces = 2;
-            this.nudNormalDistribMedia.Location = new System.Drawing.Point(184, 31);
+            this.nudNormalDistribMedia.Location = new System.Drawing.Point(38, 29);
             this.nudNormalDistribMedia.Name = "nudNormalDistribMedia";
             this.nudNormalDistribMedia.Size = new System.Drawing.Size(120, 20);
-            this.nudNormalDistribMedia.TabIndex = 13;
+            this.nudNormalDistribMedia.TabIndex = 0;
             // 
             // label2
             // 
@@ -415,11 +428,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblElapsedTimeFrecuencies);
-            this.groupBox2.Controls.Add(this.graficoObtenida);
             this.groupBox2.Controls.Add(this.dtgIntervalos);
             this.groupBox2.Location = new System.Drawing.Point(343, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1003, 700);
+            this.groupBox2.Size = new System.Drawing.Size(1003, 309);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -447,7 +459,7 @@
             this.graficoObtenida.ImeMode = System.Windows.Forms.ImeMode.On;
             legend5.Name = "Legend1";
             this.graficoObtenida.Legends.Add(legend5);
-            this.graficoObtenida.Location = new System.Drawing.Point(6, 172);
+            this.graficoObtenida.Location = new System.Drawing.Point(355, 468);
             this.graficoObtenida.Name = "graficoObtenida";
             this.graficoObtenida.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             series9.BorderColor = System.Drawing.Color.Red;
@@ -464,11 +476,12 @@
             series10.Name = "Esperada";
             this.graficoObtenida.Series.Add(series9);
             this.graficoObtenida.Series.Add(series10);
-            this.graficoObtenida.Size = new System.Drawing.Size(991, 497);
+            this.graficoObtenida.Size = new System.Drawing.Size(991, 286);
             this.graficoObtenida.SuppressExceptions = true;
             this.graficoObtenida.TabIndex = 10;
             this.graficoObtenida.Text = "Gráfico";
             this.graficoObtenida.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
+            this.graficoObtenida.Visible = false;
             // 
             // dtgIntervalos
             // 
@@ -491,12 +504,12 @@
             this.Column2,
             this.Column3});
             this.dtgIntervalos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtgIntervalos.Location = new System.Drawing.Point(6, 15);
+            this.dtgIntervalos.Location = new System.Drawing.Point(6, 19);
             this.dtgIntervalos.Name = "dtgIntervalos";
             this.dtgIntervalos.ReadOnly = true;
             this.dtgIntervalos.RowHeadersVisible = false;
             this.dtgIntervalos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgIntervalos.Size = new System.Drawing.Size(991, 147);
+            this.dtgIntervalos.Size = new System.Drawing.Size(991, 276);
             this.dtgIntervalos.TabIndex = 8;
             // 
             // columna1
@@ -533,10 +546,11 @@
             // 
             // btnGraficoExcel
             // 
+            this.btnGraficoExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGraficoExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraficoExcel.Location = new System.Drawing.Point(349, 757);
+            this.btnGraficoExcel.Location = new System.Drawing.Point(770, 328);
             this.btnGraficoExcel.Name = "btnGraficoExcel";
-            this.btnGraficoExcel.Size = new System.Drawing.Size(225, 57);
+            this.btnGraficoExcel.Size = new System.Drawing.Size(232, 60);
             this.btnGraficoExcel.TabIndex = 14;
             this.btnGraficoExcel.Text = "Ver en Excel";
             this.btnGraficoExcel.UseVisualStyleBackColor = true;
@@ -546,25 +560,36 @@
             // 
             this.gradlib.AutoSize = true;
             this.gradlib.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gradlib.Location = new System.Drawing.Point(344, 718);
+            this.gradlib.Location = new System.Drawing.Point(6, 23);
             this.gradlib.Name = "gradlib";
             this.gradlib.Size = new System.Drawing.Size(184, 25);
             this.gradlib.TabIndex = 11;
             this.gradlib.Text = "Grados de Libertad:";
             this.gradlib.Visible = false;
             // 
+            // gbResult
+            // 
+            this.gbResult.Controls.Add(this.gradlib);
+            this.gbResult.Location = new System.Drawing.Point(344, 318);
+            this.gbResult.Name = "gbResult";
+            this.gbResult.Size = new System.Drawing.Size(276, 70);
+            this.gbResult.TabIndex = 15;
+            this.gbResult.TabStop = false;
+            this.gbResult.Text = "Resultado";
+            // 
             // TP3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1405, 826);
+            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btnGraficoExcel);
+            this.Controls.Add(this.graficoObtenida);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gradlib);
             this.Name = "TP3";
-            this.Text = "SIM - Grupo 7 - TP 3";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "SIM - Grupo 4 - TP 3";
             this.Load += new System.EventHandler(this.TP3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -589,8 +614,9 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graficoObtenida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntervalos)).EndInit();
+            this.gbResult.ResumeLayout(false);
+            this.gbResult.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -638,6 +664,7 @@
         private System.Windows.Forms.NumericUpDown nudNormalDistribDeviation;
         private System.Windows.Forms.Button btnGraficoExcel;
         private System.Windows.Forms.ComboBox cmbIntervalo;
+        private System.Windows.Forms.GroupBox gbResult;
     }
 }
 
