@@ -28,80 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.uniformeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exponencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuStrip1.SuspendLayout();
+            this.btn_uniforme = new System.Windows.Forms.Button();
+            this.btn_exponencial = new System.Windows.Forms.Button();
+            this.btn_normal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // btn_uniforme
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uniformeToolStripMenuItem,
-            this.exponencialToolStripMenuItem,
-            this.normalToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(944, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.btn_uniforme.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btn_uniforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_uniforme.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_uniforme.Location = new System.Drawing.Point(12, 50);
+            this.btn_uniforme.Name = "btn_uniforme";
+            this.btn_uniforme.Size = new System.Drawing.Size(217, 66);
+            this.btn_uniforme.TabIndex = 0;
+            this.btn_uniforme.Text = "Uniforme";
+            this.btn_uniforme.UseVisualStyleBackColor = false;
+            this.btn_uniforme.Click += new System.EventHandler(this.btn_uniforme_Click_1);
             // 
-            // uniformeToolStripMenuItem
+            // btn_exponencial
             // 
-            this.uniformeToolStripMenuItem.Name = "uniformeToolStripMenuItem";
-            this.uniformeToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
-            this.uniformeToolStripMenuItem.Text = "Uniforme";
-            this.uniformeToolStripMenuItem.Click += new System.EventHandler(this.uniformeToolStripMenuItem_Click);
+            this.btn_exponencial.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btn_exponencial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exponencial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_exponencial.Location = new System.Drawing.Point(235, 50);
+            this.btn_exponencial.Name = "btn_exponencial";
+            this.btn_exponencial.Size = new System.Drawing.Size(217, 66);
+            this.btn_exponencial.TabIndex = 1;
+            this.btn_exponencial.Text = "Exponencial";
+            this.btn_exponencial.UseVisualStyleBackColor = false;
+            this.btn_exponencial.Click += new System.EventHandler(this.btn_exponencial_Click_1);
             // 
-            // exponencialToolStripMenuItem
+            // btn_normal
             // 
-            this.exponencialToolStripMenuItem.Name = "exponencialToolStripMenuItem";
-            this.exponencialToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
-            this.exponencialToolStripMenuItem.Text = "Exponencial";
-            this.exponencialToolStripMenuItem.Click += new System.EventHandler(this.exponencialToolStripMenuItem_Click);
-            // 
-            // normalToolStripMenuItem
-            // 
-            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
-            this.normalToolStripMenuItem.Text = "Normal";
-            this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.btn_normal.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btn_normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_normal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_normal.Location = new System.Drawing.Point(458, 50);
+            this.btn_normal.Name = "btn_normal";
+            this.btn_normal.Size = new System.Drawing.Size(217, 66);
+            this.btn_normal.TabIndex = 2;
+            this.btn_normal.Text = "Normal";
+            this.btn_normal.UseVisualStyleBackColor = false;
+            this.btn_normal.Click += new System.EventHandler(this.btn_normal_Click_1);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 321);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(692, 166);
+            this.Controls.Add(this.btn_normal);
+            this.Controls.Add(this.btn_exponencial);
+            this.Controls.Add(this.btn_uniforme);
             this.Name = "Form1";
-            this.Text = "Principal";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
+
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem uniformeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exponencialToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem normalToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btn_uniforme;
+        private System.Windows.Forms.Button btn_exponencial;
+        private System.Windows.Forms.Button btn_normal;
     }
 }
 
