@@ -101,7 +101,7 @@
             this.inferior,
             this.superior});
             this.gridDemanda.Location = new System.Drawing.Point(406, 12);
-            this.gridDemanda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridDemanda.Margin = new System.Windows.Forms.Padding(2);
             this.gridDemanda.Name = "gridDemanda";
             this.gridDemanda.RowHeadersWidth = 51;
             this.gridDemanda.RowTemplate.Height = 24;
@@ -162,7 +162,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.gridEntrega.Location = new System.Drawing.Point(830, 12);
-            this.gridEntrega.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridEntrega.Margin = new System.Windows.Forms.Padding(2);
             this.gridEntrega.Name = "gridEntrega";
             this.gridEntrega.RowHeadersWidth = 51;
             this.gridEntrega.RowTemplate.Height = 24;
@@ -223,7 +223,7 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.gridDaniada.Location = new System.Drawing.Point(830, 110);
-            this.gridDaniada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridDaniada.Margin = new System.Windows.Forms.Padding(2);
             this.gridDaniada.Name = "gridDaniada";
             this.gridDaniada.RowHeadersWidth = 51;
             this.gridDaniada.RowTemplate.Height = 24;
@@ -280,7 +280,7 @@
             this.label1.Location = new System.Drawing.Point(94, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 15);
+            this.label1.Size = new System.Drawing.Size(22, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Km";
             // 
@@ -290,7 +290,7 @@
             this.label2.Location = new System.Drawing.Point(94, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 15);
+            this.label2.Size = new System.Drawing.Size(20, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ko";
             // 
@@ -300,41 +300,45 @@
             this.label3.Location = new System.Drawing.Point(97, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 15);
+            this.label3.Size = new System.Drawing.Size(19, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Ks";
             // 
             // txtKm
             // 
             this.txtKm.Location = new System.Drawing.Point(124, 10);
-            this.txtKm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKm.Margin = new System.Windows.Forms.Padding(2);
             this.txtKm.Name = "txtKm";
             this.txtKm.Size = new System.Drawing.Size(76, 20);
             this.txtKm.TabIndex = 8;
+            this.txtKm.TextChanged += new System.EventHandler(this.txtKm_TextChanged);
             // 
             // txtKo
             // 
             this.txtKo.Location = new System.Drawing.Point(124, 32);
-            this.txtKo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKo.Margin = new System.Windows.Forms.Padding(2);
             this.txtKo.Name = "txtKo";
             this.txtKo.Size = new System.Drawing.Size(76, 20);
             this.txtKo.TabIndex = 9;
+            this.txtKo.TextChanged += new System.EventHandler(this.txtKo_TextChanged);
             // 
             // txtKs
             // 
             this.txtKs.Location = new System.Drawing.Point(124, 55);
-            this.txtKs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKs.Margin = new System.Windows.Forms.Padding(2);
             this.txtKs.Name = "txtKs";
             this.txtKs.Size = new System.Drawing.Size(76, 20);
             this.txtKs.TabIndex = 10;
+            this.txtKs.TextChanged += new System.EventHandler(this.txtKs_TextChanged);
             // 
             // txtStockInicial
             // 
             this.txtStockInicial.Location = new System.Drawing.Point(124, 78);
-            this.txtStockInicial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStockInicial.Margin = new System.Windows.Forms.Padding(2);
             this.txtStockInicial.Name = "txtStockInicial";
             this.txtStockInicial.Size = new System.Drawing.Size(76, 20);
             this.txtStockInicial.TabIndex = 11;
+            this.txtStockInicial.TextChanged += new System.EventHandler(this.txtStockInicial_TextChanged);
             // 
             // label4
             // 
@@ -342,7 +346,7 @@
             this.label4.Location = new System.Drawing.Point(53, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 15);
+            this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Stock inicial";
             // 
@@ -352,7 +356,7 @@
             this.label5.Location = new System.Drawing.Point(6, 103);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 15);
+            this.label5.Size = new System.Drawing.Size(109, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Cantidad de semanas";
             // 
@@ -362,7 +366,7 @@
             this.label6.Location = new System.Drawing.Point(35, 126);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 15);
+            this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Semana desde";
             // 
@@ -372,38 +376,41 @@
             this.label7.Location = new System.Drawing.Point(40, 149);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 15);
+            this.label7.Size = new System.Drawing.Size(75, 13);
             this.label7.TabIndex = 15;
             this.label7.Text = "Semana hasta";
             // 
             // txtSemanas
             // 
             this.txtSemanas.Location = new System.Drawing.Point(124, 101);
-            this.txtSemanas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSemanas.Margin = new System.Windows.Forms.Padding(2);
             this.txtSemanas.Name = "txtSemanas";
             this.txtSemanas.Size = new System.Drawing.Size(76, 20);
             this.txtSemanas.TabIndex = 16;
+            this.txtSemanas.TextChanged += new System.EventHandler(this.txtSemanas_TextChanged);
             // 
             // txtSemanaDesde
             // 
             this.txtSemanaDesde.Location = new System.Drawing.Point(124, 124);
-            this.txtSemanaDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSemanaDesde.Margin = new System.Windows.Forms.Padding(2);
             this.txtSemanaDesde.Name = "txtSemanaDesde";
             this.txtSemanaDesde.Size = new System.Drawing.Size(76, 20);
             this.txtSemanaDesde.TabIndex = 17;
+            this.txtSemanaDesde.TextChanged += new System.EventHandler(this.txtSemanaDesde_TextChanged);
             // 
             // txtSemanaHasta
             // 
             this.txtSemanaHasta.Location = new System.Drawing.Point(124, 146);
-            this.txtSemanaHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSemanaHasta.Margin = new System.Windows.Forms.Padding(2);
             this.txtSemanaHasta.Name = "txtSemanaHasta";
             this.txtSemanaHasta.Size = new System.Drawing.Size(76, 20);
             this.txtSemanaHasta.TabIndex = 18;
+            this.txtSemanaHasta.TextChanged += new System.EventHandler(this.txtSemanaHasta_TextChanged);
             // 
             // btnSimular
             // 
             this.btnSimular.Location = new System.Drawing.Point(242, 149);
-            this.btnSimular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSimular.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimular.Name = "btnSimular";
             this.btnSimular.Size = new System.Drawing.Size(56, 19);
             this.btnSimular.TabIndex = 19;
@@ -437,7 +444,7 @@
             this.semanas,
             this.llega});
             this.gridSimulacion.Location = new System.Drawing.Point(9, 187);
-            this.gridSimulacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridSimulacion.Margin = new System.Windows.Forms.Padding(2);
             this.gridSimulacion.Name = "gridSimulacion";
             this.gridSimulacion.ReadOnly = true;
             this.gridSimulacion.RowHeadersWidth = 51;
@@ -622,7 +629,7 @@
             this.label8.Location = new System.Drawing.Point(217, 12);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 15);
+            this.label8.Size = new System.Drawing.Size(15, 13);
             this.label8.TabIndex = 21;
             this.label8.Text = "Q";
             // 
@@ -632,25 +639,27 @@
             this.label9.Location = new System.Drawing.Point(218, 35);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 15);
+            this.label9.Size = new System.Drawing.Size(15, 13);
             this.label9.TabIndex = 22;
             this.label9.Text = "R";
             // 
             // txtQ
             // 
             this.txtQ.Location = new System.Drawing.Point(242, 10);
-            this.txtQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQ.Margin = new System.Windows.Forms.Padding(2);
             this.txtQ.Name = "txtQ";
             this.txtQ.Size = new System.Drawing.Size(76, 20);
             this.txtQ.TabIndex = 23;
+            this.txtQ.TextChanged += new System.EventHandler(this.txtQ_TextChanged);
             // 
             // txtR
             // 
             this.txtR.Location = new System.Drawing.Point(242, 32);
-            this.txtR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtR.Margin = new System.Windows.Forms.Padding(2);
             this.txtR.Name = "txtR";
             this.txtR.Size = new System.Drawing.Size(76, 20);
             this.txtR.TabIndex = 24;
+            this.txtR.TextChanged += new System.EventHandler(this.txtR_TextChanged);
             // 
             // Form1
             // 
@@ -680,7 +689,7 @@
             this.Controls.Add(this.gridDaniada);
             this.Controls.Add(this.gridEntrega);
             this.Controls.Add(this.gridDemanda);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Simulación";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

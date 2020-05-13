@@ -29,11 +29,17 @@ namespace simulacion_tp4
         }
         private void btnSimular_Click(object sender, EventArgs e)
         {
-            actualizarDemanda();
-            actualizarEntrega();
-            actualizarDaniada();
+            if (isValid())
+            {
+                actualizarDemanda();
+                actualizarEntrega();
+                actualizarDaniada();
 
-            simular();
+                simular();
+            }
+            else {
+                MessageBox.Show("Ingrese todos los campos.", "Error");
+            }
         }
 
         private void iniciarValores()
@@ -310,6 +316,68 @@ namespace simulacion_tp4
             gridSimulacion.Columns["rndPedido"].DisplayIndex = 16;
             gridSimulacion.Columns["semanas"].DisplayIndex = 17;
             gridSimulacion.Columns["llega"].DisplayIndex = 18;
+        }
+
+        private bool isValid()
+        {
+            return txtKm.Text != "" && txtKo.Text != "" && txtKs.Text != "" && txtStockInicial.Text != "" && txtSemanas.Text != "" 
+                && txtSemanaDesde.Text != "" && txtSemanaHasta.Text != "" && txtQ.Text != "" && txtR.Text != "";
+        }
+
+        private void showErrorMessage(TextBox textbox)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textbox.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Por favor ingrese solo números enteros positivos.");
+                textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1);
+            }
+
+        }
+
+
+        private void txtKm_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtKm);
+        }
+
+        private void txtKo_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtKo);
+        }
+
+        private void txtKs_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtKs);
+        }
+
+        private void txtStockInicial_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtStockInicial);
+        }
+
+        private void txtSemanas_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtSemanas);
+        }
+
+        private void txtSemanaDesde_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtSemanaDesde);
+        }
+
+        private void txtSemanaHasta_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtSemanaHasta);
+        }
+
+        private void txtQ_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtQ);
+        }
+
+        private void txtR_TextChanged(object sender, EventArgs e)
+        {
+            showErrorMessage(txtR);
         }
     }
 }
