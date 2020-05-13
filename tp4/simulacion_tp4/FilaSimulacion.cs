@@ -22,11 +22,17 @@ namespace simulacion_tp4
         private int totalAcumulado;
         private double rndDaniada;
         private int daniada;
+        private int daniadaTotal;
         private double rndPedido;
         private int semanas;
         private int llega;
         private int disponible;
 
+        public int DaniadaTotal
+        {
+            get { return daniadaTotal; }
+            set { daniadaTotal = value; }
+        }
         public int Disponible
         {
             get { return disponible; }

@@ -152,16 +152,27 @@ namespace simulacion_tp4
         private void simular()
         {
             simulacion = new List<FilaSimulacion>();
-            int llega = 0;
+            int llega = -1;
             int cantidadPedida = 0;
             int stockActual = int.Parse(txtStockInicial.Text);
             int totalAcumulado = 0;
+            int cantidadDaniadas = 0;
 
             for (int i = 0; i < int.Parse(txtSemanas.Text); i+=2)
             {
                 filaX = new FilaSimulacion();
                 filaX.Semana = i + 1;
-                if (filaX.Semana == llega) { stockActual += cantidadPedida; cantidadPedida = 0; }
+                if (filaX.Semana == llega)
+                {
+                    filaX.RndDaniada = generarRandom();
+                    filaX.Daniada = buscarDaniada(filaX.RndDaniada);
+                    if (filaX.Daniada == 0) { filaX.Disponible = int.Parse(txtQ.Text); } else { filaX.Disponible = int.Parse(txtQ.Text) - 1; cantidadDaniadas++; }
+                    cantidadPedida = filaX.Disponible;
+                    stockActual += cantidadPedida;
+                    cantidadPedida = 0;
+                    llega = 0;
+                }
+                filaX.DaniadaTotal = cantidadDaniadas;
                 filaX.StockInicio = stockActual;
                 filaX.RndDemanda = generarRandom();
                 filaX.Demanda = buscarDemanda(filaX.RndDemanda);
@@ -169,20 +180,16 @@ namespace simulacion_tp4
                 stockActual -= filaX.Venta;
                 filaX.StockFin = stockActual;
                 if (filaX.Demanda > filaX.Venta) filaX.Faltante = filaX.Demanda - filaX.Venta; else filaX.Faltante = 0;
-                if (filaX.StockFin <= int.Parse(txtR.Text) && cantidadPedida == 0)
+                if (filaX.StockFin <= int.Parse(txtR.Text) && cantidadPedida == 0 && llega <= 0)
                 {
                     filaX.RndPedido = generarRandom();
                     filaX.Semanas = buscarEntrega(filaX.RndPedido);
                     filaX.Llega = filaX.Semana + filaX.Semanas;
-                    filaX.RndDaniada = generarRandom();
-                    filaX.Daniada = buscarDaniada(filaX.RndDaniada);
-                    if (filaX.Daniada == 0) filaX.Disponible = int.Parse(txtQ.Text); else filaX.Disponible = int.Parse(txtQ.Text) - 1;
                     llega = filaX.Llega;
-                    cantidadPedida = filaX.Disponible;
+                    filaX.Ko = int.Parse(txtQ.Text) * int.Parse(txtKo.Text);
                 }
                 filaX.Km = filaX.StockFin * int.Parse(txtKm.Text);
                 filaX.Ks = filaX.Faltante * int.Parse(txtKs.Text);
-                filaX.Ko = filaX.Disponible * int.Parse(txtKo.Text);
                 filaX.Total = filaX.Km + filaX.Ks + filaX.Ko;
                 totalAcumulado += filaX.Total;
                 filaX.TotalAcumulado = totalAcumulado;
@@ -193,7 +200,17 @@ namespace simulacion_tp4
 
                 filaY = new FilaSimulacion();
                 filaY.Semana = i + 2;
-                if (filaY.Semana == llega) { stockActual += cantidadPedida; cantidadPedida = 0; }
+                if (filaY.Semana == llega)
+                {
+                    filaY.RndDaniada = generarRandom();
+                    filaY.Daniada = buscarDaniada(filaY.RndDaniada);
+                    if (filaY.Daniada == 0) { filaY.Disponible = int.Parse(txtQ.Text); } else { filaY.Disponible = int.Parse(txtQ.Text) - 1; cantidadDaniadas++; }
+                    cantidadPedida = filaY.Disponible;
+                    stockActual += cantidadPedida; 
+                    cantidadPedida = 0;
+                    llega = 0;
+                }
+                filaY.DaniadaTotal = cantidadDaniadas;
                 filaY.StockInicio = stockActual;
                 filaY.RndDemanda = generarRandom();
                 filaY.Demanda = buscarDemanda(filaY.RndDemanda);
@@ -201,20 +218,16 @@ namespace simulacion_tp4
                 stockActual -= filaY.Venta;
                 filaY.StockFin = stockActual;
                 if (filaY.Demanda > filaY.Venta) filaY.Faltante = filaY.Demanda - filaY.Venta; else filaY.Faltante = 0;
-                if (filaY.StockFin <= int.Parse(txtR.Text) && cantidadPedida == 0)
+                if (filaY.StockFin <= int.Parse(txtR.Text) && cantidadPedida == 0 && llega <= 0)
                 {
                     filaY.RndPedido = generarRandom();
                     filaY.Semanas = buscarEntrega(filaY.RndPedido);
                     filaY.Llega = filaY.Semana + filaY.Semanas;
-                    filaY.RndDaniada = generarRandom();
-                    filaY.Daniada = buscarDaniada(filaY.RndDaniada);
-                    if (filaY.Daniada == 0) filaY.Disponible = int.Parse(txtQ.Text); else filaY.Disponible = int.Parse(txtQ.Text) - 1;
                     llega = filaY.Llega;
-                    cantidadPedida = filaY.Disponible;
+                    filaY.Ko = int.Parse(txtQ.Text) * int.Parse(txtKo.Text);
                 }
                 filaY.Km = filaY.StockFin * int.Parse(txtKm.Text);
                 filaY.Ks = filaY.Faltante * int.Parse(txtKs.Text);
-                filaY.Ko = filaY.Disponible * int.Parse(txtKo.Text);
                 filaY.Total = filaY.Km + filaY.Ks + filaY.Ko;
                 totalAcumulado += filaY.Total;
                 filaY.TotalAcumulado = totalAcumulado;
@@ -279,23 +292,24 @@ namespace simulacion_tp4
         private void ordenColumnas()
         {
             gridSimulacion.Columns["semana"].DisplayIndex = 0;
-            gridSimulacion.Columns["stockInicio"].DisplayIndex = 1;
-            gridSimulacion.Columns["rndDemanda"].DisplayIndex = 2;
-            gridSimulacion.Columns["demanda2"].DisplayIndex = 3;
-            gridSimulacion.Columns["venta"].DisplayIndex = 4;
-            gridSimulacion.Columns["stockFin"].DisplayIndex = 5;
-            gridSimulacion.Columns["faltante"].DisplayIndex = 6;
-            gridSimulacion.Columns["km"].DisplayIndex = 7;
-            gridSimulacion.Columns["ks"].DisplayIndex = 8;
-            gridSimulacion.Columns["ko"].DisplayIndex = 9;
-            gridSimulacion.Columns["total"].DisplayIndex = 10;
-            gridSimulacion.Columns["totalAcumulado"].DisplayIndex = 11;
-            gridSimulacion.Columns["rndPedido"].DisplayIndex = 12;
-            gridSimulacion.Columns["semanas"].DisplayIndex = 13;
-            gridSimulacion.Columns["llega"].DisplayIndex = 14;
-            gridSimulacion.Columns["rndDaniada"].DisplayIndex = 15;
-            gridSimulacion.Columns["daniada2"].DisplayIndex = 16;
-            gridSimulacion.Columns["disponible"].DisplayIndex = 17;
+            gridSimulacion.Columns["rndDaniada"].DisplayIndex = 1;
+            gridSimulacion.Columns["daniada2"].DisplayIndex = 2;
+            gridSimulacion.Columns["daniadaTotal"].DisplayIndex = 3;
+            gridSimulacion.Columns["disponible"].DisplayIndex = 4;
+            gridSimulacion.Columns["stockInicio"].DisplayIndex = 5;
+            gridSimulacion.Columns["rndDemanda"].DisplayIndex = 6;
+            gridSimulacion.Columns["demanda2"].DisplayIndex = 7;
+            gridSimulacion.Columns["venta"].DisplayIndex = 8;
+            gridSimulacion.Columns["stockFin"].DisplayIndex = 9;
+            gridSimulacion.Columns["faltante"].DisplayIndex = 10;
+            gridSimulacion.Columns["km"].DisplayIndex = 11;
+            gridSimulacion.Columns["ks"].DisplayIndex = 12;
+            gridSimulacion.Columns["ko"].DisplayIndex = 13;
+            gridSimulacion.Columns["total"].DisplayIndex = 14;
+            gridSimulacion.Columns["totalAcumulado"].DisplayIndex = 15;
+            gridSimulacion.Columns["rndPedido"].DisplayIndex = 16;
+            gridSimulacion.Columns["semanas"].DisplayIndex = 17;
+            gridSimulacion.Columns["llega"].DisplayIndex = 18;
         }
     }
 }
