@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbIntervalo = new System.Windows.Forms.ComboBox();
             this.lblElapsedTimeGenerator = new System.Windows.Forms.Label();
@@ -67,13 +67,13 @@
             this.nudNormalDistribSeed = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblElapsedTimeFrecuencies = new System.Windows.Forms.Label();
-            this.graficoObtenida = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dtgIntervalos = new System.Windows.Forms.DataGridView();
             this.columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.graficoObtenida = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnGraficoExcel = new System.Windows.Forms.Button();
             this.gradlib = new System.Windows.Forms.Label();
             this.gbResult = new System.Windows.Forms.GroupBox();
@@ -93,8 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudNormalDistribMedia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNormalDistribSeed)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoObtenida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntervalos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoObtenida)).BeginInit();
             this.gbResult.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -446,56 +446,19 @@
             this.lblElapsedTimeFrecuencies.Text = "label11";
             this.lblElapsedTimeFrecuencies.Visible = false;
             // 
-            // graficoObtenida
-            // 
-            this.graficoObtenida.AllowDrop = true;
-            chartArea5.AxisX.MajorGrid.Enabled = false;
-            chartArea5.AxisX.Title = "Intervalos / Clases";
-            chartArea5.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
-            chartArea5.AxisY.Title = "Frecuencia";
-            chartArea5.AxisY.TitleAlignment = System.Drawing.StringAlignment.Near;
-            chartArea5.Name = "ChartArea1";
-            this.graficoObtenida.ChartAreas.Add(chartArea5);
-            this.graficoObtenida.ImeMode = System.Windows.Forms.ImeMode.On;
-            legend5.Name = "Legend1";
-            this.graficoObtenida.Legends.Add(legend5);
-            this.graficoObtenida.Location = new System.Drawing.Point(355, 468);
-            this.graficoObtenida.Name = "graficoObtenida";
-            this.graficoObtenida.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            series9.BorderColor = System.Drawing.Color.Red;
-            series9.ChartArea = "ChartArea1";
-            series9.CustomProperties = "PointWidth=1";
-            series9.Legend = "Legend1";
-            series9.LegendText = "Observada";
-            series9.Name = "Observada";
-            series9.SmartLabelStyle.Enabled = false;
-            series10.BorderColor = System.Drawing.Color.Red;
-            series10.ChartArea = "ChartArea1";
-            series10.CustomProperties = "PointWidth=1";
-            series10.Legend = "Legend1";
-            series10.Name = "Esperada";
-            this.graficoObtenida.Series.Add(series9);
-            this.graficoObtenida.Series.Add(series10);
-            this.graficoObtenida.Size = new System.Drawing.Size(991, 286);
-            this.graficoObtenida.SuppressExceptions = true;
-            this.graficoObtenida.TabIndex = 10;
-            this.graficoObtenida.Text = "Gráfico";
-            this.graficoObtenida.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
-            this.graficoObtenida.Visible = false;
-            // 
             // dtgIntervalos
             // 
             this.dtgIntervalos.AllowUserToAddRows = false;
             this.dtgIntervalos.AllowUserToDeleteRows = false;
             this.dtgIntervalos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgIntervalos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgIntervalos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgIntervalos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgIntervalos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columna1,
@@ -514,8 +477,8 @@
             // 
             // columna1
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.columna1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.columna1.DefaultCellStyle = dataGridViewCellStyle2;
             this.columna1.HeaderText = "Intervalos";
             this.columna1.Name = "columna1";
             this.columna1.ReadOnly = true;
@@ -543,6 +506,43 @@
             this.Column3.HeaderText = "C (Acum)";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            // 
+            // graficoObtenida
+            // 
+            this.graficoObtenida.AllowDrop = true;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.Title = "Intervalos / Clases";
+            chartArea1.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
+            chartArea1.AxisY.Title = "Frecuencia";
+            chartArea1.AxisY.TitleAlignment = System.Drawing.StringAlignment.Near;
+            chartArea1.Name = "ChartArea1";
+            this.graficoObtenida.ChartAreas.Add(chartArea1);
+            this.graficoObtenida.ImeMode = System.Windows.Forms.ImeMode.On;
+            legend1.Name = "Legend1";
+            this.graficoObtenida.Legends.Add(legend1);
+            this.graficoObtenida.Location = new System.Drawing.Point(355, 406);
+            this.graficoObtenida.Name = "graficoObtenida";
+            this.graficoObtenida.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            series1.BorderColor = System.Drawing.Color.Red;
+            series1.ChartArea = "ChartArea1";
+            series1.CustomProperties = "PointWidth=1";
+            series1.Legend = "Legend1";
+            series1.LegendText = "Observada";
+            series1.Name = "Observada";
+            series1.SmartLabelStyle.Enabled = false;
+            series2.BorderColor = System.Drawing.Color.Red;
+            series2.ChartArea = "ChartArea1";
+            series2.CustomProperties = "PointWidth=1";
+            series2.Legend = "Legend1";
+            series2.Name = "Esperada";
+            this.graficoObtenida.Series.Add(series1);
+            this.graficoObtenida.Series.Add(series2);
+            this.graficoObtenida.Size = new System.Drawing.Size(991, 286);
+            this.graficoObtenida.SuppressExceptions = true;
+            this.graficoObtenida.TabIndex = 10;
+            this.graficoObtenida.Text = "Gráfico";
+            this.graficoObtenida.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
+            this.graficoObtenida.Visible = false;
             // 
             // btnGraficoExcel
             // 
@@ -582,7 +582,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1405, 826);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btnGraficoExcel);
             this.Controls.Add(this.graficoObtenida);
@@ -612,8 +612,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudNormalDistribSeed)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoObtenida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntervalos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoObtenida)).EndInit();
             this.gbResult.ResumeLayout(false);
             this.gbResult.PerformLayout();
             this.ResumeLayout(false);
