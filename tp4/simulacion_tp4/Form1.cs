@@ -60,7 +60,7 @@ namespace simulacion_tp4
             gridDaniada.DataSource = daniada;
 
             txtKm.Text = "3";
-            txtKo.Text = "20";
+            txtKo.Text = "120";
             txtKs.Text = "5";
             txtStockInicial.Text = "7";
             txtQ.Text = "6";
