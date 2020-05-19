@@ -60,7 +60,7 @@ namespace simulacion_tp4
             gridDaniada.DataSource = daniada;
 
             txtKm.Text = "3";
-            txtKo.Text = "120";
+            txtKo.Text = "20";
             txtKs.Text = "5";
             txtStockInicial.Text = "7";
             txtQ.Text = "6";
@@ -192,7 +192,7 @@ namespace simulacion_tp4
                     filaX.Semanas = buscarEntrega(filaX.RndPedido);
                     filaX.Llega = filaX.Semana + filaX.Semanas;
                     llega = filaX.Llega;
-                    filaX.Ko = int.Parse(txtQ.Text) * int.Parse(txtKo.Text);
+                    filaX.Ko = /*int.Parse(txtQ.Text) **/ int.Parse(txtKo.Text);
                 }
                 filaX.Km = filaX.StockFin * int.Parse(txtKm.Text);
                 filaX.Ks = filaX.Faltante * int.Parse(txtKs.Text);
@@ -230,7 +230,7 @@ namespace simulacion_tp4
                     filaY.Semanas = buscarEntrega(filaY.RndPedido);
                     filaY.Llega = filaY.Semana + filaY.Semanas;
                     llega = filaY.Llega;
-                    filaY.Ko = int.Parse(txtQ.Text) * int.Parse(txtKo.Text);
+                    filaY.Ko = /*int.Parse(txtQ.Text) **/ int.Parse(txtKo.Text);//---
                 }
                 filaY.Km = filaY.StockFin * int.Parse(txtKm.Text);
                 filaY.Ks = filaY.Faltante * int.Parse(txtKs.Text);
