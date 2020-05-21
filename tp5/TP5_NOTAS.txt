@@ -1,7 +1,12 @@
 TRABAJO PRACTICO N° 5
 
-Una playa de estacionamiento tiene 20 sectores para estacionar (todos de igual dimensión). Los coches llegan a la playa con un índice entre llegadas de 13´. El 45% de los coches son automóviles pequeños, el 25% automóviles grandes y el 30% utilitarios. Independientemente del tipo de coches, el 50% estaciona 1 hora, el 30% 2 horas, el 15% por 3 horas y el resto 4 horas. Si la playa se llena, los autos que llegan no ingresan, siguen de largo y no regresan (un cartel indica el estado de la playa). La calle es angosta y muy transitada, por lo que ningún auto puede detenerse en la misma. El cobro se efectúa al final del período de estacionamiento. El tiempo de cobro es de 2´.
-Una vez que el auto abandona la zona de cobro, abandona la playa, solo después de esto, otro auto puede ubicarse en la zona de cobro para abonar el importe del estacionamiento. Si un auto está en zona de cobro pueden ingresar otros autos a la playa.
+Una playa de estacionamiento tiene 20 sectores para estacionar (todos de igual dimensión). 
+-Los coches llegan a la playa con un índice entre llegadas de 13´. El 45% de los coches son automóviles pequeños, el 25% automóviles grandes y el 30% utilitarios. Independientemente del tipo de coches, el 50% estaciona 1 hora, el 30% 2 horas, el 15% por 3 horas y el resto 4 horas. 
+-Si la playa se llena, los autos que llegan no ingresan, siguen de largo y no regresan (un cartel indica el estado de la playa). La calle es angosta y muy transitada, por lo que ningún auto puede detenerse en la misma. 
+-El cobro se efectúa al final del período de estacionamiento. El tiempo de cobro es de 2´.
+-Una vez que el auto abandona la zona de cobro, abandona la playa, solo después de esto, otro auto puede ubicarse en la zona de cobro para abonar el importe del estacionamiento. 
+-Si un auto está en zona de cobro pueden ingresar otros autos a la playa.
+
 a)	¿Cómo determinaría la recaudación de la playa si un auto pequeño paga $1 c/hora, un auto grande $1,2 y un utilitario $1,5?.
 b)	Cantidad de autos q no pudieron ingresar y Porcentaje de utilización de la playa
 c)	Mejoraría  el desempeño de la playa si se agrega otra cabina de cobro ¿?
