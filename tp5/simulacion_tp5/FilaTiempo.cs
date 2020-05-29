@@ -8,25 +8,25 @@ namespace simulacion_tp5
 {
     public class FilaTiempo
     {
-        private int horas;
+        private int minutos;
         private double probabilidad;
         private double acumulada;
         private double inferior;
         private double superior;
 
-        public FilaTiempo(int horas, double probabilidad, double acumulada, double inferior, double superior)
+        public FilaTiempo(int minutos, double probabilidad, double acumulada, double inferior, double superior)
         {
-            this.horas = horas;
+            this.minutos = minutos;
             this.probabilidad = probabilidad;
             this.acumulada = acumulada;
             this.inferior = inferior;
             this.superior = superior;
         }
 
-        public int Cantidad
+        public int Minutos
         {
-            get {return horas; }
-            set {horas=value; }
+            get {return minutos; }
+            set {minutos=value; }
         }
         public Double Probabilidad
         {

@@ -13,7 +13,7 @@ namespace simulacion_tp5
 {
     public partial class Form1 : Form
     {
-        List<FilaTipo> tipo = new List<FilaTipo>();
+        List<FilaTamaño> tamaño = new List<FilaTamaño>();
         List<FilaTiempo> tiempo = new List<FilaTiempo>();
         List<FilaSimulacion> Simulacion;
         private Random random = new Random();
@@ -28,18 +28,19 @@ namespace simulacion_tp5
         {
             txtIndiceLlegada.Text = "13";
             txtTiempoDeCobro.Text = "2";
+            cboCantCajas.Items.Add("1");
+            cboCantCajas.Items.Add("2");
 
-            tiempo.Add(new FilaTiempo(1,  .50,     .50,   000,  .50));
-            tiempo.Add(new FilaTiempo(2,  .30,     .80,   .50,  .80));
-            tiempo.Add(new FilaTiempo(3,  .15,     .95,   .80,  .95));
-            tiempo.Add(new FilaTiempo(4,  .05,     001,   .95,  001));
+            tamaño.Add(new FilaTamaño("Pequeño", .45, .45, 000, .50));
+            tamaño.Add(new FilaTamaño("Grande", .25, .70, .45, .70));
+            tamaño.Add(new FilaTamaño("Utilitario", .30, .45, .70, 001));
+            gridTamaño.DataSource = tamaño;
+
+            tiempo.Add(new FilaTiempo( 60,  .50,     .50,   000,  .50));
+            tiempo.Add(new FilaTiempo(120,  .30,     .80,   .50,  .80));
+            tiempo.Add(new FilaTiempo(180,  .15,     .95,   .80,  .95));
+            tiempo.Add(new FilaTiempo(240,  .05,     001,   .95,  001));
             gridTiempo.DataSource = tiempo;
-
-            tipo.Add(new FilaTipo("Pequeños",   .45,    .45,    000,   .50));
-            tipo.Add(new FilaTipo("Grandes",    .25,    .70,    .45,   .70));
-            tipo.Add(new FilaTipo("Utilitarios",.30,    .45,    .70,   001));
-            gridTipo.DataSource = tipo;
-
         }
 
         private void btnSimular_Click(object sender, EventArgs e)
@@ -53,9 +54,9 @@ namespace simulacion_tp5
             double probabilidadTotal = 0;
             double probabilidadAcumulada = 0;
             double probabilidadInferior = 0;
-            for (int i = 0; i < tipo.Count; i++)
+            for (int i = 0; i < tamaño.Count; i++)
             {
-                probabilidadTotal += tipo[i].Probabilidad;
+                probabilidadTotal += tamaño[i].Probabilidad;
             }
             probabilidadAcumulada = probabilidadTotal;
 
@@ -65,16 +66,16 @@ namespace simulacion_tp5
             }
             else
             {
-                for (int i = 0; i < tipo.Count; i++)
+                for (int i = 0; i < tamaño.Count; i++)
                 {
-                    probabilidadAcumulada += tipo[i].Probabilidad;
-                    tipo[i].Acumulada = probabilidadAcumulada;
-                    tipo[i].Inferior = probabilidadInferior;
-                    tipo[i].Superior = probabilidadAcumulada;
+                    probabilidadAcumulada += tamaño[i].Probabilidad;
+                    tamaño[i].Acumulada = probabilidadAcumulada;
+                    tamaño[i].Inferior = probabilidadInferior;
+                    tamaño[i].Superior = probabilidadAcumulada;
                     probabilidadInferior = probabilidadAcumulada;
                 }
-                gridTipo.DataSource = tipo;
-                gridTipo.Refresh();
+                gridTamaño.DataSource = tamaño;
+                gridTamaño.Refresh();
             }
         }
 
@@ -96,10 +97,10 @@ namespace simulacion_tp5
             {
                 for (int i = 0; i < tiempo.Count; i++)
                 {
-                    probabilidadAcumulada += tipo[i].Probabilidad;
-                    tipo[i].Acumulada = probabilidadAcumulada;
-                    tipo[i].Inferior = probabilidadInferior;
-                    tipo[i].Superior = probabilidadAcumulada;
+                    probabilidadAcumulada += tiempo[i].Probabilidad;
+                    tiempo[i].Acumulada = probabilidadAcumulada;
+                    tiempo[i].Inferior = probabilidadInferior;
+                    tiempo[i].Superior = probabilidadAcumulada;
                     probabilidadInferior = probabilidadAcumulada;
                 }
                 gridTiempo.DataSource = tiempo;

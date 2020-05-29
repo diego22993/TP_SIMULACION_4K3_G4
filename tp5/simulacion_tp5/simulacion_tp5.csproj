@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="FilaTiempo.cs" />
     <Compile Include="FilaSimulacion.cs" />
-    <Compile Include="FilaTipo.cs" />
+    <Compile Include="FilaTamaño.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace simulacion_tp5
 {
-    public class FilaTipo
+    public class FilaTamaño
     {
-        private string tipo;
+        private string tamaño;
         private double probabilidad;
         private double acumulada;
         private double inferior;
         private double superior;
 
-        public FilaTipo(string tipo, double probabilidad, double acumulada, double inferior, double superior)
+        public FilaTamaño(string tamaño, double probabilidad, double acumulada, double inferior, double superior)
         {
-            this.tipo = tipo;
+            this.tamaño = tamaño;
             this.probabilidad = probabilidad;
             this.acumulada = acumulada;
             this.inferior = inferior;
             this.superior = superior;
         }
 
-        public String Tipo
+        public String Tamaño
         {
-            get { return tipo; }
-            set { tipo = value; }
+            get { return tamaño; }
+            set { tamaño = value; }
         }
         public Double Probabilidad
         {
