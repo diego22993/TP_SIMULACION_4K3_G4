@@ -16,6 +16,7 @@ namespace simulacion_tp5
         List<FilaTamaño> tamaño = new List<FilaTamaño>();
         List<FilaTiempo> tiempo = new List<FilaTiempo>();
         List<FilaSimulacion> Simulacion;
+        List<Auto> Autos;
         private Random random = new Random();
 
         public Form1()
