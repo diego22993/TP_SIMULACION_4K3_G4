@@ -47,6 +47,7 @@ namespace simulacion_tp5
         {
             ActualizarTipo();
             ActualizarTiempo();
+            
         }
 
         private void ActualizarTipo()

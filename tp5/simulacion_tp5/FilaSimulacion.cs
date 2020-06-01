@@ -12,7 +12,8 @@ namespace simulacion_tp5
         private double rndTamañoAuto;
         private string tamaño;
         private double rndTiempoLlegada;
-        private double tiempoLlegada;
+        private double tiempoE
+            Llegada;
         private double rndFinCobro;
         private double finCobro;
         private double recaudacion;
