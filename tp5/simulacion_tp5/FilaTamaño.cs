@@ -8,25 +8,25 @@ namespace simulacion_tp5
 {
     public class FilaTamaño
     {
-        private string tamaño;
+        private string tamanio;
         private double probabilidad;
         private double acumulada;
         private double inferior;
         private double superior;
 
-        public FilaTamaño(string tamaño, double probabilidad, double acumulada, double inferior, double superior)
+        public FilaTamaño(string tamanio, double probabilidad, double acumulada, double inferior, double superior)
         {
-            this.tamaño = tamaño;
+            this.tamanio = tamanio;
             this.probabilidad = probabilidad;
             this.acumulada = acumulada;
             this.inferior = inferior;
             this.superior = superior;
         }
 
-        public String Tamaño
+        public String Tamanio
         {
-            get { return tamaño; }
-            set { tamaño = value; }
+            get { return tamanio; }
+            set { tamanio = value; }
         }
         public Double Probabilidad
         {

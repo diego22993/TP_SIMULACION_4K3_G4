@@ -17,6 +17,10 @@ namespace simulacion_tp5
         List<FilaTiempo> tiempo = new List<FilaTiempo>();
         List<FilaSimulacion> Simulacion;
         List<Auto> Autos;
+
+        FilaSimulacion filaX;
+        FilaSimulacion filaXY;
+
         private Random random = new Random();
 
         public Form1()
@@ -46,8 +50,15 @@ namespace simulacion_tp5
 
         private void btnSimular_Click(object sender, EventArgs e)
         {
-            ActualizarTipo();
-            ActualizarTiempo();
+            if (Valido())
+            {
+                ActualizarTipo();
+                ActualizarTiempo();
+            }
+            else
+            {
+                MessageBox.Show("Debe Ingresar todos los datos","Error",MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
             
         }
 
@@ -110,6 +121,11 @@ namespace simulacion_tp5
             }
         }
 
+        public void Simular()
+        {
+
+        }
+
         private double generarRandom()
         {
             double nro = Math.Round(random.NextDouble(), 2, MidpointRounding.AwayFromZero);
@@ -117,7 +133,26 @@ namespace simulacion_tp5
             return nro;
         }
 
-        
+        private bool Valido()
+        {
+            /*return String.IsNullOrEmpty(txtIndiceLlegada.Text) && String.IsNullOrEmpty(txtCantidadIteraciones.Text) && String.IsNullOrEmpty(txtMinutosFin.Text) &&
+                String.IsNullOrEmpty(txtMinutosInicio.Text) && String.IsNullOrEmpty(txtTiempoDeCobro.Text);*/
+            return txtIndiceLlegada.Text != "" && txtCantidadIteraciones.Text != "" && txtMinutosFin.Text!= "" && txtMinutosInicio.Text!="" && txtTiempoDeCobro.Text!=""; 
+        }
 
+        private void showErrorMessage(MaskedTextBox t)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(t.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Por favor ingrese solo números enteros positivos","Error",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
+                t.Text = t.Text.Remove(t.Text.Length - 1);
+            }
+        }
+
+        public int Rechazados(int i)
+        {
+
+            return i;
+        }       
     }
 }

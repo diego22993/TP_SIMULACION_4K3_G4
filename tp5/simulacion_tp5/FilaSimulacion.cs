@@ -9,11 +9,10 @@ namespace simulacion_tp5
     public class FilaSimulacion
     {
         private double minutos;
-        private double rndTamañoAuto;
-        private string tamaño;
-        private double rndTiempoLlegada;
-        private double tiempoE
-            Llegada;
+        private double rndTamanio;
+        private string tamanio;
+        private double rndLlegada;
+        private double tiempoLlegada;
         private double rndFinCobro;
         private double finCobro;
         private double recaudacion;
@@ -23,20 +22,20 @@ namespace simulacion_tp5
             get {return minutos; }
             set {minutos=value; }
         }
-        public Double RndTamañoAuto
+        public Double RndTamanio
         {
-            get { return RndTamañoAuto; }
-            set { RndTamañoAuto = value; }
+            get { return RndTamanio; }
+            set { RndTamanio = value; }
         }
-        public String Tamaño
+        public String Tamanio
         {
-            get { return tamaño; }
-            set { tamaño = value; }
+            get { return tamanio; }
+            set { tamanio = value; }
         }
         public Double RndTiempoLlegada
         {
-            get { return rndTiempoLlegada; }
-            set { rndTiempoLlegada = value; }
+            get { return rndLlegada; }
+            set { rndLlegada = value; }
         }
         public Double TiempoLlegada
         {

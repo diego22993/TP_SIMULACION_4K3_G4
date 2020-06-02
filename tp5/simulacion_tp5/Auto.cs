@@ -10,14 +10,14 @@ namespace simulacion_tp5
     {
         private String estado;
         private int lugar;
-        private String tamaño;
+        private String tamanio;
         private double hsIngreso;
 
-        public Auto(String estado, int lugar, string tamaño, double hsIngreso)
+        public Auto(String estado, int lugar, string tamanio, double hsIngreso)
         {
             this.estado = estado;
             this.lugar = lugar;
-            this.tamaño = tamaño;
+            this.tamanio = tamanio;
             this.hsIngreso = hsIngreso;
         }
         public String Estado
@@ -30,10 +30,10 @@ namespace simulacion_tp5
             get { return lugar; }
             set { lugar = value; }
         }
-        public String Tamaño
+        public String Tamanio
         {
-            get { return tamaño; }
-            set { tamaño = value; }
+            get { return tamanio; }
+            set { tamanio = value; }
         }
         public Double HsIngreso
         {
