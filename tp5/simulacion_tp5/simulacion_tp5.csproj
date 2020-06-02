@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auto.cs" />
     <Compile Include="FilaTiempo.cs" />
     <Compile Include="FilaSimulacion.cs" />
     <Compile Include="FilaTamaño.cs" />
