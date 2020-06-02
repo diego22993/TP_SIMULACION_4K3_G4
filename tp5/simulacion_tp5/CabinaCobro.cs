@@ -8,13 +8,14 @@ namespace simulacion_tp5
 {
     public class CabinaCobro
     {
-        private String estado;
-        private int[] cola;
+        private String estado; /* Libre (L) | Ocupada (O) */
+        private int cola;
         private float recAcumulado;
 
-        public CabinaCobro(String estado, float recAcumulado)
+        public CabinaCobro(String estado, int cola,float recAcumulado)
         {
             this.estado = estado;
+            this.cola = cola;
             this.recAcumulado = recAcumulado;
         }
 
@@ -22,6 +23,11 @@ namespace simulacion_tp5
         {
             get { return estado; }
             set { estado = value; }
+        }
+        public int Cola
+        {
+            get { return cola; }
+            set { cola = value; }
         }
         public float RecAcumulado
         {

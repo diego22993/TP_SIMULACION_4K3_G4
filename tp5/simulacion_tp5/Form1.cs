@@ -17,11 +17,16 @@ namespace simulacion_tp5
         List<FilaTiempo> tiempo = new List<FilaTiempo>();
         List<FilaSimulacion> Simulacion;
         List<Auto> Autos;
+        Playa p;
+        CabinaCobro c1;
+        CabinaCobro c2;
 
         FilaSimulacion filaX;
         FilaSimulacion filaXY;
 
         private Random random = new Random();
+
+
 
         public Form1()
         {
@@ -123,6 +128,9 @@ namespace simulacion_tp5
 
         public void Simular()
         {
+            p = new Playa("Libre",20);
+            c1 = new CabinaCobro("Libre",0,0);
+            c2 = new CabinaCobro("Libre",0,0);
 
         }
 
