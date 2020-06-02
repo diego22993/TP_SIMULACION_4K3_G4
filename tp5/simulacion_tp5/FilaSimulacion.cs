@@ -9,12 +9,13 @@ namespace simulacion_tp5
     public class FilaSimulacion
     {
         private double minutos;
+        private double rndLlegada;
+        private double tiempoEntreLlegadas;
+        private double proximaLlegada;
         private double rndTamanio;
         private string tamanio;
-        private double rndLlegada;
-        private double tiempoLlegada;
-        private double rndFinCobro;
-        private double finCobro;
+        private double rndTiempoServicio;
+        private double tiempoServicio;
         private double recaudacion;
 
         public Double Minutos
@@ -22,35 +23,35 @@ namespace simulacion_tp5
             get {return minutos; }
             set {minutos=value; }
         }
+        public Double TiempoEntreLlegadas
+        {
+            get { return tiempoEntreLlegadas; }
+            set { tiempoEntreLlegadas = value; }
+        }
+        public Double ProximaLlegada
+        {
+            get { return proximaLlegada; }
+            set { proximaLlegada = value; }
+        }
         public Double RndTamanio
         {
-            get { return RndTamanio; }
-            set { RndTamanio = value; }
+            get { return rndTamanio; }
+            set { rndTamanio = value; }
         }
         public String Tamanio
         {
             get { return tamanio; }
             set { tamanio = value; }
         }
-        public Double RndTiempoLlegada
+        public Double RndTiempoServicio
         {
-            get { return rndLlegada; }
-            set { rndLlegada = value; }
+            get { return rndTiempoServicio; }
+            set { rndTiempoServicio = value; }
         }
-        public Double TiempoLlegada
+        public Double TiempoServicio
         {
-            get { return tiempoLlegada; }
-            set { tiempoLlegada = value; }
-        }
-        public Double RndFinCobro
-        {
-            get { return RndFinCobro; }
-            set { RndFinCobro = value; }
-        }
-        public Double FinCobro
-        {
-            get { return finCobro; }
-            set { finCobro = value; }
+            get { return tiempoServicio; }
+            set { tiempoServicio = value; }
         }
         public Double Recaudacion
         {
