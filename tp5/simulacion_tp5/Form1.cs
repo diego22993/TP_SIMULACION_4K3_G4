@@ -15,14 +15,14 @@ namespace simulacion_tp5
     {
         List<FilaTamaño> tamaño = new List<FilaTamaño>();
         List<FilaTiempo> tiempo = new List<FilaTiempo>();
-        List<FilaSimulacion> Simulacion;
-        List<Auto> Autos;
-        Playa p;
-        CabinaCobro c1;
-        CabinaCobro c2;
+        //List<FilaSimulacion> Simulacion;
+        //List<Auto> Autos;
+        //Playa p;
+        //CabinaCobro c1;
+        //CabinaCobro c2;
 
-        FilaSimulacion filaX;
-        FilaSimulacion filaXY;
+        //FilaSimulacion filaX;
+        //FilaSimulacion filaXY;
 
         private Random random = new Random();
 
@@ -41,8 +41,8 @@ namespace simulacion_tp5
             cboCantCajas.Items.Add("1");
             cboCantCajas.Items.Add("2");
 
-            tamaño.Add(new FilaTamaño("Pequeño", .45, .45, 000, .50));
-            tamaño.Add(new FilaTamaño("Grande", .25, .70, .45, .70));
+            tamaño.Add(new FilaTamaño("Pequeño",    .45, .45, 000, .50));
+            tamaño.Add(new FilaTamaño("Grande",     .25, .70, .45, .70));
             tamaño.Add(new FilaTamaño("Utilitario", .30, .45, .70, 001));
             gridTamaño.DataSource = tamaño;
 
@@ -55,15 +55,15 @@ namespace simulacion_tp5
 
         private void btnSimular_Click(object sender, EventArgs e)
         {
-            if (Valido())
-            {
+            //if (Valido())
+            //{
                 ActualizarTipo();
                 ActualizarTiempo();
-            }
-            else
-            {
-                MessageBox.Show("Debe Ingresar todos los datos","Error",MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-            }
+            //}
+            //else
+            //{
+                //MessageBox.Show("Debe Ingresar todos los datos","Error",MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            //}
             
         }
 
@@ -76,14 +76,13 @@ namespace simulacion_tp5
             {
                 probabilidadTotal += tamaño[i].Probabilidad;
             }
-            probabilidadAcumulada = probabilidadTotal;
-
             if (probabilidadTotal != 1)
             {
                 MessageBox.Show("La Probabilidad total debe dar 1","Probabilidad del Tipo Automovil",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
+                probabilidadAcumulada = 0;
                 for (int i = 0; i < tamaño.Count; i++)
                 {
                     probabilidadAcumulada += tamaño[i].Probabilidad;
@@ -102,36 +101,28 @@ namespace simulacion_tp5
             double probabilidadAcumuladaTotal = 0;
             double probabilidadAcumulada = 0;
             double probabilidadInferior = 0;
-
             for (int i = 0; i < tiempo.Count; i++)
             {
                 probabilidadAcumuladaTotal += tiempo[i].Probabilidad;
             }
-            if (probabilidadAcumuladaTotal!=1)
+            if (probabilidadAcumuladaTotal != 1)
             {
                 MessageBox.Show("La Probabilidad Total debe ser igual a 1","Probabilidad del Tiempo de Estacionamiento",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
+                probabilidadAcumulada = 0;
                 for (int i = 0; i < tiempo.Count; i++)
                 {
-                    probabilidadAcumulada += tiempo[i].Probabilidad;
-                    tiempo[i].Acumulada = probabilidadAcumulada;
-                    tiempo[i].Inferior = probabilidadInferior;
-                    tiempo[i].Superior = probabilidadAcumulada;
-                    probabilidadInferior = probabilidadAcumulada;
+                    probabilidadAcumulada += Math.Round(tiempo[i].Probabilidad, 2);
+                    tiempo[i].Acumulada = Math.Round(probabilidadAcumulada, 2);
+                    tiempo[i].Inferior = Math.Round(probabilidadInferior, 2);
+                    tiempo[i].Superior = Math.Round(probabilidadAcumulada, 2);
+                    probabilidadInferior = Math.Round(probabilidadAcumulada, 2);
                 }
                 gridTiempo.DataSource = tiempo;
                 gridTiempo.Refresh();
             }
-        }
-
-        public void Simular()
-        {
-            p = new Playa("Libre",20);
-            c1 = new CabinaCobro("Libre",0,0);
-            c2 = new CabinaCobro("Libre",0,0);
-
         }
 
         private double generarRandom()
@@ -159,8 +150,16 @@ namespace simulacion_tp5
 
         public int Rechazados(int i)
         {
-
             return i;
-        }       
+        }
+
+        public void Simular()
+        {
+            //p = new Playa("Libre",20);
+            //c1 = new CabinaCobro("Libre",0,0);
+            //c2 = new CabinaCobro("Libre",0,0);
+
+
+        }
     }
 }

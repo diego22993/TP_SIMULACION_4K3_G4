@@ -43,16 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtMinutosFin = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +73,16 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridSimulacion = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridTamaño)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTiempo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSimulacion)).BeginInit();
@@ -90,6 +90,8 @@
             // 
             // gridTamaño
             // 
+            this.gridTamaño.AllowUserToAddRows = false;
+            this.gridTamaño.AllowUserToDeleteRows = false;
             this.gridTamaño.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTamaño.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -97,47 +99,54 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.gridTamaño.Location = new System.Drawing.Point(183, 29);
+            this.gridTamaño.Location = new System.Drawing.Point(244, 36);
+            this.gridTamaño.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridTamaño.Name = "gridTamaño";
             this.gridTamaño.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.gridTamaño.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTamaño.Size = new System.Drawing.Size(348, 104);
+            this.gridTamaño.Size = new System.Drawing.Size(460, 111);
             this.gridTamaño.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 32);
+            this.label1.Location = new System.Drawing.Point(8, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(125, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Indice de LLegada";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 59);
+            this.label2.Location = new System.Drawing.Point(19, 73);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.Size = new System.Drawing.Size(117, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tiempo de Cobro";
             // 
             // txtIndiceLlegada
             // 
-            this.txtIndiceLlegada.Location = new System.Drawing.Point(108, 29);
+            this.txtIndiceLlegada.Location = new System.Drawing.Point(144, 36);
+            this.txtIndiceLlegada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIndiceLlegada.Name = "txtIndiceLlegada";
-            this.txtIndiceLlegada.Size = new System.Drawing.Size(69, 20);
+            this.txtIndiceLlegada.Size = new System.Drawing.Size(91, 22);
             this.txtIndiceLlegada.TabIndex = 3;
             // 
             // txtTiempoDeCobro
             // 
-            this.txtTiempoDeCobro.Location = new System.Drawing.Point(108, 56);
+            this.txtTiempoDeCobro.Location = new System.Drawing.Point(144, 69);
+            this.txtTiempoDeCobro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTiempoDeCobro.Name = "txtTiempoDeCobro";
-            this.txtTiempoDeCobro.Size = new System.Drawing.Size(69, 20);
+            this.txtTiempoDeCobro.Size = new System.Drawing.Size(91, 22);
             this.txtTiempoDeCobro.TabIndex = 4;
             // 
             // gridTiempo
             // 
+            this.gridTiempo.AllowUserToAddRows = false;
+            this.gridTiempo.AllowUserToDeleteRows = false;
             this.gridTiempo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTiempo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -145,17 +154,20 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            this.gridTiempo.Location = new System.Drawing.Point(549, 29);
+            this.gridTiempo.Location = new System.Drawing.Point(732, 36);
+            this.gridTiempo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridTiempo.Name = "gridTiempo";
+            this.gridTiempo.RowHeadersWidth = 51;
             this.gridTiempo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTiempo.Size = new System.Drawing.Size(370, 128);
+            this.gridTiempo.Size = new System.Drawing.Size(501, 140);
             this.gridTiempo.TabIndex = 5;
             // 
             // btnSimular
             // 
-            this.btnSimular.Location = new System.Drawing.Point(12, 203);
+            this.btnSimular.Location = new System.Drawing.Point(16, 250);
+            this.btnSimular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimular.Name = "btnSimular";
-            this.btnSimular.Size = new System.Drawing.Size(130, 23);
+            this.btnSimular.Size = new System.Drawing.Size(173, 28);
             this.btnSimular.TabIndex = 6;
             this.btnSimular.Text = "Simular";
             this.btnSimular.UseVisualStyleBackColor = true;
@@ -164,9 +176,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 116);
+            this.label3.Location = new System.Drawing.Point(24, 143);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.Size = new System.Drawing.Size(110, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Cant Iteraciones";
             // 
@@ -174,283 +187,268 @@
             // 
             this.cboCantCajas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCantCajas.FormattingEnabled = true;
-            this.cboCantCajas.Location = new System.Drawing.Point(108, 84);
+            this.cboCantCajas.Location = new System.Drawing.Point(144, 103);
+            this.cboCantCajas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboCantCajas.Name = "cboCantCajas";
-            this.cboCantCajas.Size = new System.Drawing.Size(69, 21);
+            this.cboCantCajas.Size = new System.Drawing.Size(91, 24);
             this.cboCantCajas.TabIndex = 9;
             // 
             // txtCantidadIteraciones
             // 
-            this.txtCantidadIteraciones.Location = new System.Drawing.Point(108, 113);
+            this.txtCantidadIteraciones.Location = new System.Drawing.Point(144, 139);
+            this.txtCantidadIteraciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidadIteraciones.Name = "txtCantidadIteraciones";
-            this.txtCantidadIteraciones.Size = new System.Drawing.Size(69, 20);
+            this.txtCantidadIteraciones.Size = new System.Drawing.Size(91, 22);
             this.txtCantidadIteraciones.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 87);
+            this.label4.Location = new System.Drawing.Point(8, 107);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.Size = new System.Drawing.Size(134, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Cant Cabinas Cobro";
             // 
             // txtMinutosInicio
             // 
-            this.txtMinutosInicio.Location = new System.Drawing.Point(108, 141);
+            this.txtMinutosInicio.Location = new System.Drawing.Point(144, 174);
+            this.txtMinutosInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMinutosInicio.Name = "txtMinutosInicio";
-            this.txtMinutosInicio.Size = new System.Drawing.Size(69, 20);
+            this.txtMinutosInicio.Size = new System.Drawing.Size(91, 22);
             this.txtMinutosInicio.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 144);
+            this.label5.Location = new System.Drawing.Point(24, 177);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.Size = new System.Drawing.Size(113, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Minutos de Inicio";
             // 
             // txtMinutosFin
             // 
-            this.txtMinutosFin.Location = new System.Drawing.Point(108, 168);
+            this.txtMinutosFin.Location = new System.Drawing.Point(144, 207);
+            this.txtMinutosFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMinutosFin.Name = "txtMinutosFin";
-            this.txtMinutosFin.Size = new System.Drawing.Size(69, 20);
+            this.txtMinutosFin.Size = new System.Drawing.Size(91, 22);
             this.txtMinutosFin.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 171);
+            this.label6.Location = new System.Drawing.Point(35, 210);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.Size = new System.Drawing.Size(100, 17);
             this.label6.TabIndex = 14;
             this.label6.Text = "Minutos de Fin";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "minutos";
-            this.Column6.HeaderText = "TIEMPO (min)";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 80;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "probabilidad";
-            this.Column7.HeaderText = "P";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 60;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "acumulada";
-            this.Column8.HeaderText = "PAC";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 60;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "inferior";
-            this.Column9.HeaderText = "INF";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 60;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "superior";
-            this.Column10.HeaderText = "SUP";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "tamanio";
-            this.Column1.HeaderText = "Tamaño";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "probabilidad";
-            this.Column2.HeaderText = "P";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 60;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "acumulada";
-            this.Column3.HeaderText = "PAC";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 60;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "inferior";
-            this.Column4.HeaderText = "INF";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 60;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "superior";
-            this.Column5.HeaderText = "SUP";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 60;
             // 
             // Column39
             // 
             this.Column39.HeaderText = "Estacionamiento 20";
+            this.Column39.MinimumWidth = 6;
             this.Column39.Name = "Column39";
+            this.Column39.Width = 125;
             // 
             // Column38
             // 
             this.Column38.HeaderText = "Estacionamiento 19";
+            this.Column38.MinimumWidth = 6;
             this.Column38.Name = "Column38";
+            this.Column38.Width = 125;
             // 
             // Column37
             // 
             this.Column37.HeaderText = "Estacionamiento 18";
+            this.Column37.MinimumWidth = 6;
             this.Column37.Name = "Column37";
+            this.Column37.Width = 125;
             // 
             // Column36
             // 
             this.Column36.HeaderText = "Estacionamiento 17";
+            this.Column36.MinimumWidth = 6;
             this.Column36.Name = "Column36";
+            this.Column36.Width = 125;
             // 
             // Column35
             // 
             this.Column35.HeaderText = "Estacionamiento 16";
+            this.Column35.MinimumWidth = 6;
             this.Column35.Name = "Column35";
+            this.Column35.Width = 125;
             // 
             // Column34
             // 
             this.Column34.HeaderText = "Estacionamiento 15";
+            this.Column34.MinimumWidth = 6;
             this.Column34.Name = "Column34";
+            this.Column34.Width = 125;
             // 
             // Column33
             // 
             this.Column33.HeaderText = "Estacionamiento 14";
+            this.Column33.MinimumWidth = 6;
             this.Column33.Name = "Column33";
+            this.Column33.Width = 125;
             // 
             // Column32
             // 
             this.Column32.HeaderText = "Estacionamiento 13";
+            this.Column32.MinimumWidth = 6;
             this.Column32.Name = "Column32";
+            this.Column32.Width = 125;
             // 
             // Column31
             // 
             this.Column31.HeaderText = "Estacionamiento 12";
+            this.Column31.MinimumWidth = 6;
             this.Column31.Name = "Column31";
+            this.Column31.Width = 125;
             // 
             // Column30
             // 
             this.Column30.HeaderText = "Estacionamiento 11";
+            this.Column30.MinimumWidth = 6;
             this.Column30.Name = "Column30";
+            this.Column30.Width = 125;
             // 
             // Column29
             // 
             this.Column29.HeaderText = "Estacionamiento 10";
+            this.Column29.MinimumWidth = 6;
             this.Column29.Name = "Column29";
+            this.Column29.Width = 125;
             // 
             // Column28
             // 
             this.Column28.HeaderText = "Estacionamiento 9";
+            this.Column28.MinimumWidth = 6;
             this.Column28.Name = "Column28";
+            this.Column28.Width = 125;
             // 
             // Column27
             // 
             this.Column27.HeaderText = "Estacionamiento 8";
+            this.Column27.MinimumWidth = 6;
             this.Column27.Name = "Column27";
+            this.Column27.Width = 125;
             // 
             // Column26
             // 
             this.Column26.HeaderText = "Estacionamiento 7";
+            this.Column26.MinimumWidth = 6;
             this.Column26.Name = "Column26";
+            this.Column26.Width = 125;
             // 
             // Column25
             // 
             this.Column25.HeaderText = "Estacionamiento 6";
+            this.Column25.MinimumWidth = 6;
             this.Column25.Name = "Column25";
+            this.Column25.Width = 125;
             // 
             // Column24
             // 
             this.Column24.HeaderText = "Estacionamiento 5";
+            this.Column24.MinimumWidth = 6;
             this.Column24.Name = "Column24";
+            this.Column24.Width = 125;
             // 
             // Column23
             // 
             this.Column23.HeaderText = "Estacionamiento 4";
+            this.Column23.MinimumWidth = 6;
             this.Column23.Name = "Column23";
+            this.Column23.Width = 125;
             // 
             // Column22
             // 
             this.Column22.HeaderText = "Estacionamiento 3";
+            this.Column22.MinimumWidth = 6;
             this.Column22.Name = "Column22";
+            this.Column22.Width = 125;
             // 
             // Column21
             // 
             this.Column21.HeaderText = "Estacionamiento 2";
+            this.Column21.MinimumWidth = 6;
             this.Column21.Name = "Column21";
+            this.Column21.Width = 125;
             // 
             // Column20
             // 
             this.Column20.HeaderText = "Estacionamiento 1";
+            this.Column20.MinimumWidth = 6;
             this.Column20.Name = "Column20";
+            this.Column20.Width = 125;
             // 
             // Column19
             // 
             this.Column19.HeaderText = "Tiempo de Servicio";
+            this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
+            this.Column19.Width = 125;
             // 
             // Column18
             // 
             this.Column18.HeaderText = "RND";
+            this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
+            this.Column18.Width = 125;
             // 
             // Column17
             // 
             this.Column17.HeaderText = "Tamaño";
+            this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
+            this.Column17.Width = 125;
             // 
             // Column16
             // 
             this.Column16.HeaderText = "RND";
+            this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
+            this.Column16.Width = 125;
             // 
             // Column15
             // 
             this.Column15.HeaderText = "Proxima Llegada";
+            this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
+            this.Column15.Width = 125;
             // 
             // Column14
             // 
             this.Column14.HeaderText = "Tiempo Entre Llegadas";
+            this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
+            this.Column14.Width = 125;
             // 
             // Column13
             // 
             this.Column13.HeaderText = "RND";
+            this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
+            this.Column13.Width = 125;
             // 
             // Column12
             // 
             this.Column12.HeaderText = "Reloj(min)";
+            this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
+            this.Column12.Width = 125;
             // 
             // Column11
             // 
             this.Column11.HeaderText = "Evento";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
+            this.Column11.Width = 125;
             // 
             // gridSimulacion
             // 
@@ -485,17 +483,107 @@
             this.Column37,
             this.Column38,
             this.Column39});
-            this.gridSimulacion.Location = new System.Drawing.Point(12, 232);
+            this.gridSimulacion.Location = new System.Drawing.Point(16, 286);
+            this.gridSimulacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridSimulacion.Name = "gridSimulacion";
+            this.gridSimulacion.RowHeadersWidth = 51;
             this.gridSimulacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSimulacion.Size = new System.Drawing.Size(990, 150);
+            this.gridSimulacion.Size = new System.Drawing.Size(1320, 185);
             this.gridSimulacion.TabIndex = 7;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "tamanio";
+            this.Column1.HeaderText = "Tamaño";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "probabilidad";
+            this.Column2.HeaderText = "P";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 60;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "acumulada";
+            this.Column3.HeaderText = "PAC";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 60;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "inferior";
+            this.Column4.HeaderText = "INF";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 60;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "superior";
+            this.Column5.HeaderText = "SUP";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 60;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "minutos";
+            this.Column6.HeaderText = "Tiempo(min)";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 80;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "probabilidad";
+            this.Column7.HeaderText = "P";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 60;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "acumulada";
+            this.Column8.HeaderText = "PAC";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 60;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "inferior";
+            this.Column9.HeaderText = "INF";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 60;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "superior";
+            this.Column10.HeaderText = "SUP";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 60;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 450);
+            this.ClientSize = new System.Drawing.Size(1537, 554);
             this.Controls.Add(this.txtMinutosFin);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtMinutosInicio);
@@ -512,6 +600,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridTamaño);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Simulacion";
             ((System.ComponentModel.ISupportInitialize)(this.gridTamaño)).EndInit();
@@ -539,16 +628,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox txtMinutosFin;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column39;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column37;
@@ -579,6 +658,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridView gridSimulacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
 
