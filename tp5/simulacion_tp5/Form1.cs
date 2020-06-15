@@ -59,6 +59,7 @@ namespace simulacion_tp5
             //{
                 ActualizarTipo();
                 ActualizarTiempo();
+                Simular();
             //}
             //else
             //{
@@ -159,7 +160,8 @@ namespace simulacion_tp5
             //c1 = new CabinaCobro("Libre",0,0);
             //c2 = new CabinaCobro("Libre",0,0);
 
-
+            Simulacion simulacion = new Simulacion();
+            simulacion.simular();
         }
     }
 }
