@@ -38,8 +38,8 @@ namespace simulacion_tp5
         {
             txtIndiceLlegada.Text = "13";
             txtTiempoDeCobro.Text = "2";
-            cboCantCajas.Items.Add("1");
-            cboCantCajas.Items.Add("2");
+            cboCantidaCabinas.Items.Add("1");
+            cboCantidaCabinas.Items.Add("2");
 
             tamaño.Add(new FilaTamaño("Pequeño",    .45, .45, 000, .50));
             tamaño.Add(new FilaTamaño("Grande",     .25, .70, .45, .70));
@@ -137,7 +137,7 @@ namespace simulacion_tp5
         {
             /*return String.IsNullOrEmpty(txtIndiceLlegada.Text) && String.IsNullOrEmpty(txtCantidadIteraciones.Text) && String.IsNullOrEmpty(txtMinutosFin.Text) &&
                 String.IsNullOrEmpty(txtMinutosInicio.Text) && String.IsNullOrEmpty(txtTiempoDeCobro.Text);*/
-            return txtIndiceLlegada.Text != "" && txtCantidadIteraciones.Text != "" && txtMinutosFin.Text!= "" && txtMinutosInicio.Text!="" && txtTiempoDeCobro.Text!=""; 
+            return txtIndiceLlegada.Text != "" && txtCantidadIteraciones.Text != "" && txtMinutosFin.Text!= "" && txtMinutosDesde.Text!="" && txtTiempoDeCobro.Text!=""; 
         }
 
         private void showErrorMessage(MaskedTextBox t)

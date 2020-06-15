@@ -46,13 +46,13 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSimular = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboCantCajas = new System.Windows.Forms.ComboBox();
+            this.cboCantidaCabinas = new System.Windows.Forms.ComboBox();
             this.txtCantidadIteraciones = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMinutosInicio = new System.Windows.Forms.MaskedTextBox();
+            this.txtMinutosDesde = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMinutosFin = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMinutosSimulacion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridTamaño)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTiempo)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.gridTamaño.Location = new System.Drawing.Point(259, 6);
+            this.gridTamaño.Location = new System.Drawing.Point(353, 13);
             this.gridTamaño.Margin = new System.Windows.Forms.Padding(4);
             this.gridTamaño.Name = "gridTamaño";
             this.gridTamaño.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -123,17 +123,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 9);
+            this.label1.Location = new System.Drawing.Point(70, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Indice de LLegada";
+            this.label1.Text = "Índice de LLegada";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 39);
+            this.label2.Location = new System.Drawing.Point(78, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 17);
@@ -142,7 +142,7 @@
             // 
             // txtIndiceLlegada
             // 
-            this.txtIndiceLlegada.Location = new System.Drawing.Point(141, 6);
+            this.txtIndiceLlegada.Location = new System.Drawing.Point(203, 13);
             this.txtIndiceLlegada.Margin = new System.Windows.Forms.Padding(4);
             this.txtIndiceLlegada.Name = "txtIndiceLlegada";
             this.txtIndiceLlegada.Size = new System.Drawing.Size(91, 22);
@@ -150,7 +150,7 @@
             // 
             // txtTiempoDeCobro
             // 
-            this.txtTiempoDeCobro.Location = new System.Drawing.Point(141, 36);
+            this.txtTiempoDeCobro.Location = new System.Drawing.Point(203, 43);
             this.txtTiempoDeCobro.Margin = new System.Windows.Forms.Padding(4);
             this.txtTiempoDeCobro.Name = "txtTiempoDeCobro";
             this.txtTiempoDeCobro.Size = new System.Drawing.Size(91, 22);
@@ -167,7 +167,7 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            this.gridTiempo.Location = new System.Drawing.Point(259, 125);
+            this.gridTiempo.Location = new System.Drawing.Point(353, 132);
             this.gridTiempo.Margin = new System.Windows.Forms.Padding(4);
             this.gridTiempo.Name = "gridTiempo";
             this.gridTiempo.RowHeadersWidth = 51;
@@ -221,7 +221,7 @@
             // 
             // btnSimular
             // 
-            this.btnSimular.Location = new System.Drawing.Point(36, 237);
+            this.btnSimular.Location = new System.Drawing.Point(88, 244);
             this.btnSimular.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimular.Name = "btnSimular";
             this.btnSimular.Size = new System.Drawing.Size(173, 28);
@@ -233,26 +233,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 101);
+            this.label3.Location = new System.Drawing.Point(58, 168);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 17);
+            this.label3.Size = new System.Drawing.Size(137, 17);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Cant Iteraciones";
+            this.label3.Text = "Cantidad iteraciones";
             // 
-            // cboCantCajas
+            // cboCantidaCabinas
             // 
-            this.cboCantCajas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCantCajas.FormattingEnabled = true;
-            this.cboCantCajas.Location = new System.Drawing.Point(141, 66);
-            this.cboCantCajas.Margin = new System.Windows.Forms.Padding(4);
-            this.cboCantCajas.Name = "cboCantCajas";
-            this.cboCantCajas.Size = new System.Drawing.Size(91, 24);
-            this.cboCantCajas.TabIndex = 9;
+            this.cboCantidaCabinas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCantidaCabinas.FormattingEnabled = true;
+            this.cboCantidaCabinas.Location = new System.Drawing.Point(203, 73);
+            this.cboCantidaCabinas.Margin = new System.Windows.Forms.Padding(4);
+            this.cboCantidaCabinas.Name = "cboCantidaCabinas";
+            this.cboCantidaCabinas.Size = new System.Drawing.Size(91, 24);
+            this.cboCantidaCabinas.TabIndex = 9;
             // 
             // txtCantidadIteraciones
             // 
-            this.txtCantidadIteraciones.Location = new System.Drawing.Point(141, 98);
+            this.txtCantidadIteraciones.Location = new System.Drawing.Point(203, 165);
             this.txtCantidadIteraciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidadIteraciones.Name = "txtCantidadIteraciones";
             this.txtCantidadIteraciones.Size = new System.Drawing.Size(91, 22);
@@ -261,61 +261,59 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-1, 69);
+            this.label4.Location = new System.Drawing.Point(61, 76);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Cant Cabinas Cobro";
             // 
-            // txtMinutosInicio
+            // txtMinutosDesde
             // 
-            this.txtMinutosInicio.Location = new System.Drawing.Point(141, 128);
-            this.txtMinutosInicio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMinutosInicio.Name = "txtMinutosInicio";
-            this.txtMinutosInicio.Size = new System.Drawing.Size(91, 22);
-            this.txtMinutosInicio.TabIndex = 13;
+            this.txtMinutosDesde.Location = new System.Drawing.Point(203, 135);
+            this.txtMinutosDesde.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMinutosDesde.Name = "txtMinutosDesde";
+            this.txtMinutosDesde.Size = new System.Drawing.Size(91, 22);
+            this.txtMinutosDesde.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 131);
+            this.label5.Location = new System.Drawing.Point(50, 138);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 17);
+            this.label5.Size = new System.Drawing.Size(145, 17);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Minutos de Inicio";
+            this.label5.Text = "Mostrar desde minuto";
             // 
-            // txtMinutosFin
+            // label7
             // 
-            this.txtMinutosFin.Location = new System.Drawing.Point(141, 158);
-            this.txtMinutosFin.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMinutosFin.Name = "txtMinutosFin";
-            this.txtMinutosFin.Size = new System.Drawing.Size(91, 22);
-            this.txtMinutosFin.TabIndex = 15;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(77, 109);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(118, 17);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Minutos a simular";
             // 
-            // label6
+            // txtMinutosSimulacion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 161);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 17);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Minutos de Fin";
+            this.txtMinutosSimulacion.Location = new System.Drawing.Point(203, 106);
+            this.txtMinutosSimulacion.Name = "txtMinutosSimulacion";
+            this.txtMinutosSimulacion.Size = new System.Drawing.Size(91, 22);
+            this.txtMinutosSimulacion.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 286);
-            this.Controls.Add(this.txtMinutosFin);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtMinutosInicio);
+            this.ClientSize = new System.Drawing.Size(867, 286);
+            this.Controls.Add(this.txtMinutosSimulacion);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtMinutosDesde);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCantidadIteraciones);
-            this.Controls.Add(this.cboCantCajas);
+            this.Controls.Add(this.cboCantidaCabinas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSimular);
             this.Controls.Add(this.gridTiempo);
@@ -344,13 +342,11 @@
         private System.Windows.Forms.DataGridView gridTiempo;
         private System.Windows.Forms.Button btnSimular;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboCantCajas;
+        private System.Windows.Forms.ComboBox cboCantidaCabinas;
         private System.Windows.Forms.MaskedTextBox txtCantidadIteraciones;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox txtMinutosInicio;
+        private System.Windows.Forms.MaskedTextBox txtMinutosDesde;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox txtMinutosFin;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -361,6 +357,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtMinutosSimulacion;
     }
 }
 

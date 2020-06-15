@@ -11,21 +11,19 @@ namespace simulacion_tp5
     {
         private double llegadaAutoMedia;
         private double finCobro;
-        private List<FilaTamaño>  finEstacionamiento;
+        private List<FilaTiempo>  finEstacionamiento;
         private List<FilaTamaño>  tamanio;
-
-        private Int64 iteraciones;
-
-        private Random RND;
-
+        private int cantidadCabinas;
+        private double tiempoSimular;
+        private double tiempoDesde;
+        private Int64 iteracion;
+        private Int64 cantidadIteraciones;
+        private Random rnd;
         private double reloj;
-
-        private double proximaLlegada;
-        private double proximaLlegadaFin = 9999999;
 
         DataTable tabla;
 
-        public Simulacion()
+        public Simulacion(double indiceLlegada, double tiempoCobro, List<FilaTamaño> tamanioVehiculo, List<FilaTiempo> tiempoEstacionado, int cantidadCabinas, double tiempoSimular, double tiempoDesde, Int64 cantidadIteraciones)
         {
             tabla = new DataTable();
 
@@ -62,6 +60,15 @@ namespace simulacion_tp5
             tabla.Columns.Add("Cabina 01 estado", typeof(string));
             tabla.Columns.Add("Cabina 01 fin cobro", typeof(double));
             tabla.Columns.Add("Cabina 01 cola", typeof(int));
+            tabla.Columns.Add("Cabina 02 estado", typeof(string));
+            tabla.Columns.Add("Cabina 02 fin cobro", typeof(double));
+            tabla.Columns.Add("Cabina 02 cola", typeof(int));
+            tabla.Columns.Add("Racaudación cabina 01", typeof(double));
+            tabla.Columns.Add("Racaudación cabina 02", typeof(double));
+            tabla.Columns.Add("Aceptados", typeof(int));
+            tabla.Columns.Add("Rechazados", typeof(int));
+            tabla.Columns.Add("Ocupación auto", typeof(double));
+            tabla.Columns.Add("Ocupación auot acumulado", typeof(double));
             //tabla.Columns.Add("", typeof());
             //tabla.Columns.Add("", typeof());
             //tabla.Columns.Add("", typeof());
@@ -72,16 +79,24 @@ namespace simulacion_tp5
             //tabla.Columns.Add("", typeof());
             //tabla.Columns.Add("", typeof());
             //tabla.Columns.Add("", typeof());
-            //tabla.Columns.Add("", typeof());
-            //tabla.Columns.Add("", typeof());
-            //tabla.Columns.Add("", typeof());
-            //tabla.Columns.Add("", typeof());
-            //tabla.Columns.Add("", typeof());
-            //tabla.Columns.Add("", typeof());
+
+            llegadaAutoMedia = Math.Round(indiceLlegada / 60, 2);
+            finCobro = tiempoCobro;
+            tamanio = tamanioVehiculo;
+            finEstacionamiento = tiempoEstacionado;
+            this.cantidadCabinas = cantidadCabinas;
+            this.tiempoSimular = tiempoSimular;
+            this.tiempoDesde = tiempoDesde;
+            this.cantidadIteraciones = cantidadIteraciones;
+            iteracion = 0;
+            reloj = 0;
+            rnd = new Random();
         }
 
         public void simular()
         {
+
+
             Form2 datos = new Form2();
             datos.cargarTabla(tabla);
             datos.Show();
