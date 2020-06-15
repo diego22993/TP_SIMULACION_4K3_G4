@@ -22,6 +22,7 @@ namespace simulacion_tp5
         private double reloj;
 
         DataTable tabla;
+        DataRow filaActual;
 
         public Simulacion(double indiceLlegada, double tiempoCobro, List<FilaTamaño> tamanioVehiculo, List<FilaTiempo> tiempoEstacionado, int cantidadCabinas, double tiempoSimular, double tiempoDesde, Int64 cantidadIteraciones)
         {
@@ -95,7 +96,9 @@ namespace simulacion_tp5
 
         public void simular()
         {
-
+            filaActual = tabla.NewRow();
+            filaActual["Evento"] = "Inicio";
+            tabla.Rows.Add(filaActual);
 
             Form2 datos = new Form2();
             datos.cargarTabla(tabla);

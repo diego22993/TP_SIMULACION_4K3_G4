@@ -244,6 +244,9 @@
             // 
             this.cboCantidaCabinas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCantidaCabinas.FormattingEnabled = true;
+            this.cboCantidaCabinas.Items.AddRange(new object[] {
+            "1",
+            "2"});
             this.cboCantidaCabinas.Location = new System.Drawing.Point(203, 73);
             this.cboCantidaCabinas.Margin = new System.Windows.Forms.Padding(4);
             this.cboCantidaCabinas.Name = "cboCantidaCabinas";

@@ -15,18 +15,7 @@ namespace simulacion_tp5
     {
         List<FilaTamaño> tamaño = new List<FilaTamaño>();
         List<FilaTiempo> tiempo = new List<FilaTiempo>();
-        //List<FilaSimulacion> Simulacion;
-        //List<Auto> Autos;
-        //Playa p;
-        //CabinaCobro c1;
-        //CabinaCobro c2;
-
-        //FilaSimulacion filaX;
-        //FilaSimulacion filaXY;
-
         private Random random = new Random();
-
-
 
         public Form1()
         {
@@ -38,14 +27,14 @@ namespace simulacion_tp5
         {
             txtIndiceLlegada.Text = "13";
             txtTiempoDeCobro.Text = "2";
-            cboCantidaCabinas.Items.Add("1");
-            cboCantidaCabinas.Items.Add("2");
-
+            cboCantidaCabinas.SelectedIndex = 0;
+            txtMinutosSimulacion.Text = "25";
+            txtMinutosDesde.Text = "2";
+            txtCantidadIteraciones.Text = "5";
             tamaño.Add(new FilaTamaño("Pequeño",    .45, .45, 000, .50));
             tamaño.Add(new FilaTamaño("Grande",     .25, .70, .45, .70));
             tamaño.Add(new FilaTamaño("Utilitario", .30, .45, .70, 001));
             gridTamaño.DataSource = tamaño;
-
             tiempo.Add(new FilaTiempo( 60,  .50,     .50,   000,  .50));
             tiempo.Add(new FilaTiempo(120,  .30,     .80,   .50,  .80));
             tiempo.Add(new FilaTiempo(180,  .15,     .95,   .80,  .95));
@@ -55,17 +44,17 @@ namespace simulacion_tp5
 
         private void btnSimular_Click(object sender, EventArgs e)
         {
-            //if (Valido())
-            //{
+            if (Valido())
+            {
                 ActualizarTipo();
                 ActualizarTiempo();
                 Simular();
-            //}
-            //else
-            //{
-                //MessageBox.Show("Debe Ingresar todos los datos","Error",MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-            //}
-            
+            }
+            else
+            {
+                MessageBox.Show("Debe Ingresar todos los datos", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
+
         }
 
         private void ActualizarTipo()
@@ -137,7 +126,7 @@ namespace simulacion_tp5
         {
             /*return String.IsNullOrEmpty(txtIndiceLlegada.Text) && String.IsNullOrEmpty(txtCantidadIteraciones.Text) && String.IsNullOrEmpty(txtMinutosFin.Text) &&
                 String.IsNullOrEmpty(txtMinutosInicio.Text) && String.IsNullOrEmpty(txtTiempoDeCobro.Text);*/
-            return txtIndiceLlegada.Text != "" && txtCantidadIteraciones.Text != "" && txtMinutosFin.Text!= "" && txtMinutosDesde.Text!="" && txtTiempoDeCobro.Text!=""; 
+            return txtIndiceLlegada.Text != "" && txtCantidadIteraciones.Text != "" && txtMinutosSimulacion.Text!= "" && txtMinutosDesde.Text!=""  && txtTiempoDeCobro.Text!="";
         }
 
         private void showErrorMessage(MaskedTextBox t)
@@ -156,11 +145,7 @@ namespace simulacion_tp5
 
         public void Simular()
         {
-            //p = new Playa("Libre",20);
-            //c1 = new CabinaCobro("Libre",0,0);
-            //c2 = new CabinaCobro("Libre",0,0);
-
-            Simulacion simulacion = new Simulacion();
+            Simulacion simulacion = new Simulacion(double.Parse(txtIndiceLlegada.Text), double.Parse(txtTiempoDeCobro.Text), tamaño, tiempo, int.Parse(cboCantidaCabinas.Text), double.Parse(txtMinutosSimulacion.Text), double.Parse(txtMinutosDesde.Text), Int64.Parse(txtCantidadIteraciones.Text));
             simulacion.simular();
         }
     }
