@@ -29,7 +29,7 @@ namespace simulacion_tp5
             txtTiempoDeCobro.Text = "2";
             cboCantidaCabinas.SelectedIndex = 0;
             txtMinutosSimulacion.Text = "25";
-            txtMinutosDesde.Text = "2";
+            txtMinutosDesde.Text = "0";
             txtCantidadIteraciones.Text = "5";
             tamaño.Add(new FilaTamaño("Pequeño",    .45, .45, 000, .50));
             tamaño.Add(new FilaTamaño("Grande",     .25, .70, .45, .70));
