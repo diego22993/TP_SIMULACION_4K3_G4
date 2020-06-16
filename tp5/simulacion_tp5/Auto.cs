@@ -8,7 +8,7 @@ namespace simulacion_tp5
 {
     public class Auto
     {
-        private String estado;
+        private String estado; /* Estacionado (E) | Esperando Atencion Cabina (EAC) | Siendo Atendido Cabina (SAC) */
         private int lugar;
         private String tamanio;
         private double hsIngreso;
