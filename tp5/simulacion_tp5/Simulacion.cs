@@ -211,6 +211,7 @@ namespace simulacion_tp5
                     case 21:
                         reloj = finEventos[evento - 1];
                         filaActual["Evento"] = "Llegada vehículo";
+                        llegadaVehiculo();
                         break;
                     case 22:
                         reloj = finEventos[evento - 1];
@@ -236,7 +237,10 @@ namespace simulacion_tp5
 
         private double getRandom()
         {
-            return Math.Round(rnd.NextDouble(), 2);
+            double valor = 0;
+            valor = Math.Round(rnd.NextDouble(), 2);
+            if (valor == 1) valor = 0.99;
+            return valor;
         }
 
         private double getLlegadaMinutos(double rnd)
@@ -284,6 +288,27 @@ namespace simulacion_tp5
                 }
             }
             return evento;
+        }
+
+        private void llegadaVehiculo()
+        {
+            Auto a = new Auto();
+            string tipo = "";
+            double tamanioRnd = getRandom();
+
+            for (int i = 0; i < tamanio.Count; i++)
+            {
+                if (tamanioRnd < tamanio[i].Acumulada)
+                {
+                    tipo = tamanio[i].Tamanio;
+                    break;
+                }
+            }
+            if (tipo == "Pequeño") a.tamanio = Auto.Tamanio.Pequño;
+            if (tipo == "Grande") a.tamanio = Auto.Tamanio.Grande;
+            if (tipo == "Utilitario") a.tamanio = Auto.Tamanio.Utilitario;
+
+
         }
     }
 }
