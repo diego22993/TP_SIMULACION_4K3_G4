@@ -18,6 +18,26 @@ namespace simulacion_tp5
         public Form1()
         {
             InitializeComponent();
+            inicializarGrid();
+        }
+
+        public void inicializarGrid()
+        {
+            txtIndiceLlegada.Text = "13";
+            txtTiempoCobro.Text = "2";
+            cmbCantidadCabinas.SelectedIndex = 0;
+            txtHoraInicio.Text = "0";
+            txtHoraFin.Text = "25";            
+            txtCantidadIteraciones.Text = "5";
+            tamanio.Add(new FilaTamanio("Pequeño", .45, .45, 000, .50));
+            tamanio.Add(new FilaTamanio("Grande", .25, .70, .45, .70));
+            tamanio.Add(new FilaTamanio("Utilitario", .30, .45, .70, 001));
+            gridTamaño.DataSource = tamanio;
+            tiempo.Add(new FilaTiempo(60, .50, .50, 000, .50));
+            tiempo.Add(new FilaTiempo(120, .30, .80, .50, .80));
+            tiempo.Add(new FilaTiempo(180, .15, .95, .80, .95));
+            tiempo.Add(new FilaTiempo(240, .05, 001, .95, 001));
+            gridTiempo.DataSource = tiempo;
         }
 
         private void btnSimular_Click(object sender, EventArgs e)
@@ -99,7 +119,28 @@ namespace simulacion_tp5
 
         public void simular()
         {
-            //
+            for(int i = 0; i < 19; i++)
+            {
+                dgvResultados.Columns.Add("Column", "Tipo Auto");
+                dgvResultados.Columns.Add("Column", "Hora Llegada");
+                dgvResultados.Columns.Add("Column", "Estado");
+                dgvResultados.Columns.Add("Column", "Lugar");
+                dgvResultados.Columns.Add("Column", "Hora Salida");
+            }
+
+            //int iteraciones = 
+            //Dim iteraciones As New Integer
+            //iteraciones = txtIteraciones.Text
+            //Dim desde As New Double
+            //desde = txtInicio.Text
+            //Dim hasta As New Double
+            //hasta = txtFinal.Text
+            //Dim indice As New Double
+            //indice = txtIndice.Text
+            //Dim cobro As New Double
+            //cobro = txtCobro.Text
+            //Dim contador As New Integer
+            //contador = 0
         }
 
 

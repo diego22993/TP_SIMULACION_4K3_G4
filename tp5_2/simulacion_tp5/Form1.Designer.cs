@@ -53,8 +53,47 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvResultados = new System.Windows.Forms.DataGridView();
+            this.Evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoEntreLlegadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PróximaLlegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoAtención1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estacionamiento20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoAtención2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FinCobro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cola = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cola2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ACRecaudación = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AutosAceptados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AutosRechazados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridTiempo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTamaño)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
             this.SuspendLayout();
             // 
             // txtHoraInicio
@@ -305,11 +344,322 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 60;
             // 
+            // dgvResultados
+            // 
+            this.dgvResultados.AllowUserToAddRows = false;
+            this.dgvResultados.AllowUserToDeleteRows = false;
+            this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Evento,
+            this.Reloj,
+            this.RND1,
+            this.TiempoEntreLlegadas,
+            this.PróximaLlegada,
+            this.RND2,
+            this.TiempoAtención1,
+            this.Estacionamiento1,
+            this.Estacionamiento2,
+            this.Estacionamiento3,
+            this.Estacionamiento4,
+            this.Estacionamiento5,
+            this.Estacionamiento6,
+            this.Estacionamiento7,
+            this.Estacionamiento8,
+            this.Estacionamiento9,
+            this.Estacionamiento10,
+            this.Estacionamiento11,
+            this.Estacionamiento12,
+            this.Estacionamiento13,
+            this.Estacionamiento14,
+            this.Estacionamiento15,
+            this.Estacionamiento16,
+            this.Estacionamiento17,
+            this.Estacionamiento18,
+            this.Estacionamiento19,
+            this.Estacionamiento20,
+            this.TiempoAtención2,
+            this.FinCobro,
+            this.Estado,
+            this.Cola,
+            this.Estado2,
+            this.Cola2,
+            this.ACRecaudación,
+            this.AutosAceptados,
+            this.AutosRechazados,
+            this.RND3});
+            this.dgvResultados.Location = new System.Drawing.Point(13, 280);
+            this.dgvResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvResultados.Name = "dgvResultados";
+            this.dgvResultados.ReadOnly = true;
+            this.dgvResultados.RowHeadersWidth = 51;
+            this.dgvResultados.Size = new System.Drawing.Size(1663, 398);
+            this.dgvResultados.TabIndex = 33;
+            // 
+            // Evento
+            // 
+            this.Evento.HeaderText = "Evento";
+            this.Evento.MinimumWidth = 6;
+            this.Evento.Name = "Evento";
+            this.Evento.Width = 125;
+            // 
+            // Reloj
+            // 
+            this.Reloj.HeaderText = "Reloj";
+            this.Reloj.MinimumWidth = 6;
+            this.Reloj.Name = "Reloj";
+            this.Reloj.Width = 125;
+            // 
+            // RND1
+            // 
+            this.RND1.HeaderText = "RND";
+            this.RND1.MinimumWidth = 6;
+            this.RND1.Name = "RND1";
+            this.RND1.Width = 125;
+            // 
+            // TiempoEntreLlegadas
+            // 
+            this.TiempoEntreLlegadas.HeaderText = "Tiempo Entre Llegadas";
+            this.TiempoEntreLlegadas.MinimumWidth = 6;
+            this.TiempoEntreLlegadas.Name = "TiempoEntreLlegadas";
+            this.TiempoEntreLlegadas.Width = 125;
+            // 
+            // PróximaLlegada
+            // 
+            this.PróximaLlegada.HeaderText = "Próxima Llegada";
+            this.PróximaLlegada.MinimumWidth = 6;
+            this.PróximaLlegada.Name = "PróximaLlegada";
+            this.PróximaLlegada.Width = 125;
+            // 
+            // RND2
+            // 
+            this.RND2.HeaderText = "RND";
+            this.RND2.MinimumWidth = 6;
+            this.RND2.Name = "RND2";
+            this.RND2.Width = 125;
+            // 
+            // TiempoAtención1
+            // 
+            this.TiempoAtención1.HeaderText = "Tiempo Atención";
+            this.TiempoAtención1.MinimumWidth = 6;
+            this.TiempoAtención1.Name = "TiempoAtención1";
+            this.TiempoAtención1.Width = 125;
+            // 
+            // Estacionamiento1
+            // 
+            this.Estacionamiento1.HeaderText = "Estacionamiento 1";
+            this.Estacionamiento1.MinimumWidth = 6;
+            this.Estacionamiento1.Name = "Estacionamiento1";
+            this.Estacionamiento1.Width = 125;
+            // 
+            // Estacionamiento2
+            // 
+            this.Estacionamiento2.HeaderText = "Estacionamiento 2";
+            this.Estacionamiento2.MinimumWidth = 6;
+            this.Estacionamiento2.Name = "Estacionamiento2";
+            this.Estacionamiento2.Width = 125;
+            // 
+            // Estacionamiento3
+            // 
+            this.Estacionamiento3.HeaderText = "Estacionamiento 3";
+            this.Estacionamiento3.MinimumWidth = 6;
+            this.Estacionamiento3.Name = "Estacionamiento3";
+            this.Estacionamiento3.Width = 125;
+            // 
+            // Estacionamiento4
+            // 
+            this.Estacionamiento4.HeaderText = "Estacionamiento 4";
+            this.Estacionamiento4.MinimumWidth = 6;
+            this.Estacionamiento4.Name = "Estacionamiento4";
+            this.Estacionamiento4.Width = 125;
+            // 
+            // Estacionamiento5
+            // 
+            this.Estacionamiento5.HeaderText = "Estacionamiento 5";
+            this.Estacionamiento5.MinimumWidth = 6;
+            this.Estacionamiento5.Name = "Estacionamiento5";
+            this.Estacionamiento5.Width = 125;
+            // 
+            // Estacionamiento6
+            // 
+            this.Estacionamiento6.HeaderText = "Estacionamiento 6";
+            this.Estacionamiento6.MinimumWidth = 6;
+            this.Estacionamiento6.Name = "Estacionamiento6";
+            this.Estacionamiento6.Width = 125;
+            // 
+            // Estacionamiento7
+            // 
+            this.Estacionamiento7.HeaderText = "Estacionamiento 7";
+            this.Estacionamiento7.MinimumWidth = 6;
+            this.Estacionamiento7.Name = "Estacionamiento7";
+            this.Estacionamiento7.Width = 125;
+            // 
+            // Estacionamiento8
+            // 
+            this.Estacionamiento8.HeaderText = "Estacionamiento 8";
+            this.Estacionamiento8.MinimumWidth = 6;
+            this.Estacionamiento8.Name = "Estacionamiento8";
+            this.Estacionamiento8.Width = 125;
+            // 
+            // Estacionamiento9
+            // 
+            this.Estacionamiento9.HeaderText = "Estacionamiento 9";
+            this.Estacionamiento9.MinimumWidth = 6;
+            this.Estacionamiento9.Name = "Estacionamiento9";
+            this.Estacionamiento9.Width = 125;
+            // 
+            // Estacionamiento10
+            // 
+            this.Estacionamiento10.HeaderText = "Estacionamiento 10";
+            this.Estacionamiento10.MinimumWidth = 6;
+            this.Estacionamiento10.Name = "Estacionamiento10";
+            this.Estacionamiento10.Width = 125;
+            // 
+            // Estacionamiento11
+            // 
+            this.Estacionamiento11.HeaderText = "Estacionamiento 11";
+            this.Estacionamiento11.MinimumWidth = 6;
+            this.Estacionamiento11.Name = "Estacionamiento11";
+            this.Estacionamiento11.Width = 125;
+            // 
+            // Estacionamiento12
+            // 
+            this.Estacionamiento12.HeaderText = "Estacionamiento 12";
+            this.Estacionamiento12.MinimumWidth = 6;
+            this.Estacionamiento12.Name = "Estacionamiento12";
+            this.Estacionamiento12.Width = 125;
+            // 
+            // Estacionamiento13
+            // 
+            this.Estacionamiento13.HeaderText = "Estacionamiento 13";
+            this.Estacionamiento13.MinimumWidth = 6;
+            this.Estacionamiento13.Name = "Estacionamiento13";
+            this.Estacionamiento13.Width = 125;
+            // 
+            // Estacionamiento14
+            // 
+            this.Estacionamiento14.HeaderText = "Estacionamiento 14";
+            this.Estacionamiento14.MinimumWidth = 6;
+            this.Estacionamiento14.Name = "Estacionamiento14";
+            this.Estacionamiento14.Width = 125;
+            // 
+            // Estacionamiento15
+            // 
+            this.Estacionamiento15.HeaderText = "Estacionamiento 15";
+            this.Estacionamiento15.MinimumWidth = 6;
+            this.Estacionamiento15.Name = "Estacionamiento15";
+            this.Estacionamiento15.Width = 125;
+            // 
+            // Estacionamiento16
+            // 
+            this.Estacionamiento16.HeaderText = "Estacionamiento 16";
+            this.Estacionamiento16.MinimumWidth = 6;
+            this.Estacionamiento16.Name = "Estacionamiento16";
+            this.Estacionamiento16.Width = 125;
+            // 
+            // Estacionamiento17
+            // 
+            this.Estacionamiento17.HeaderText = "Estacionamiento 17";
+            this.Estacionamiento17.MinimumWidth = 6;
+            this.Estacionamiento17.Name = "Estacionamiento17";
+            this.Estacionamiento17.Width = 125;
+            // 
+            // Estacionamiento18
+            // 
+            this.Estacionamiento18.HeaderText = "Estacionamiento 18";
+            this.Estacionamiento18.MinimumWidth = 6;
+            this.Estacionamiento18.Name = "Estacionamiento18";
+            this.Estacionamiento18.Width = 125;
+            // 
+            // Estacionamiento19
+            // 
+            this.Estacionamiento19.HeaderText = "Estacionamiento 19";
+            this.Estacionamiento19.MinimumWidth = 6;
+            this.Estacionamiento19.Name = "Estacionamiento19";
+            this.Estacionamiento19.Width = 125;
+            // 
+            // Estacionamiento20
+            // 
+            this.Estacionamiento20.HeaderText = "Estacionamiento 20";
+            this.Estacionamiento20.MinimumWidth = 6;
+            this.Estacionamiento20.Name = "Estacionamiento20";
+            this.Estacionamiento20.Width = 125;
+            // 
+            // TiempoAtención2
+            // 
+            this.TiempoAtención2.HeaderText = "Tiempo Atención";
+            this.TiempoAtención2.MinimumWidth = 6;
+            this.TiempoAtención2.Name = "TiempoAtención2";
+            this.TiempoAtención2.Width = 125;
+            // 
+            // FinCobro
+            // 
+            this.FinCobro.HeaderText = "Fin Cobro";
+            this.FinCobro.MinimumWidth = 6;
+            this.FinCobro.Name = "FinCobro";
+            this.FinCobro.Width = 125;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 125;
+            // 
+            // Cola
+            // 
+            this.Cola.HeaderText = "Cola";
+            this.Cola.MinimumWidth = 6;
+            this.Cola.Name = "Cola";
+            this.Cola.Width = 125;
+            // 
+            // Estado2
+            // 
+            this.Estado2.HeaderText = "Estado 2";
+            this.Estado2.MinimumWidth = 6;
+            this.Estado2.Name = "Estado2";
+            this.Estado2.Width = 125;
+            // 
+            // Cola2
+            // 
+            this.Cola2.HeaderText = "Cola 2";
+            this.Cola2.MinimumWidth = 6;
+            this.Cola2.Name = "Cola2";
+            this.Cola2.Width = 125;
+            // 
+            // ACRecaudación
+            // 
+            this.ACRecaudación.HeaderText = "AC Recaudación";
+            this.ACRecaudación.MinimumWidth = 6;
+            this.ACRecaudación.Name = "ACRecaudación";
+            this.ACRecaudación.Width = 125;
+            // 
+            // AutosAceptados
+            // 
+            this.AutosAceptados.HeaderText = "Autos Aceptados";
+            this.AutosAceptados.MinimumWidth = 6;
+            this.AutosAceptados.Name = "AutosAceptados";
+            this.AutosAceptados.Width = 125;
+            // 
+            // AutosRechazados
+            // 
+            this.AutosRechazados.HeaderText = "Autos Rechazados";
+            this.AutosRechazados.MinimumWidth = 6;
+            this.AutosRechazados.Name = "AutosRechazados";
+            this.AutosRechazados.Width = 125;
+            // 
+            // RND3
+            // 
+            this.RND3.HeaderText = "RND";
+            this.RND3.MinimumWidth = 6;
+            this.RND3.Name = "RND3";
+            this.RND3.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 297);
+            this.ClientSize = new System.Drawing.Size(1689, 691);
+            this.Controls.Add(this.dgvResultados);
             this.Controls.Add(this.txtHoraInicio);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtHoraFin);
@@ -329,6 +679,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.gridTiempo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTamaño)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,6 +712,44 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        internal System.Windows.Forms.DataGridView dgvResultados;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Evento;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Reloj;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn RND1;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn TiempoEntreLlegadas;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn PróximaLlegada;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn RND2;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtención1;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento1;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento2;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento3;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento4;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento5;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento6;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento7;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento8;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento9;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento10;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento11;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento12;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento13;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento14;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento15;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento16;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento17;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento18;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento19;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estacionamiento20;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtención2;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn FinCobro;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Cola;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Estado2;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn Cola2;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn ACRecaudación;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn AutosAceptados;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn AutosRechazados;
+        internal System.Windows.Forms.DataGridViewTextBoxColumn RND3;
     }
 }
 
