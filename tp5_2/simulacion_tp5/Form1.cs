@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -128,6 +129,45 @@ namespace simulacion_tp5
                 dgvResultados.Columns.Add("Column", "Hora Salida");
             }
 
+            int iteraciones;
+            iteraciones = Convert.ToInt32(txtCantidadIteraciones.Text);
+            double desde;
+            desde = Convert.ToDouble(txtHoraInicio.Text);
+            double hasta;
+            hasta = Convert.ToDouble(txtHoraFin.Text);
+            double indice;
+            indice = Convert.ToDouble(txtIndiceLlegada.Text);
+            double cobro;
+            cobro = Convert.ToDouble(txtTiempoCobro.Text);
+            int contador = 0;
+
+            Random random;
+            Random random2;
+
+            double numero3;
+            double numero4;
+
+            double minimoColoreado;
+            int flagColor;
+            double minimoEstacionamiento;
+            bool flagEstacionamiento = false;
+            double minimoEsperando;
+            int flagContador;
+
+            /*AÑADIR PARA TP6
+             * 
+             * double tiempo;
+            double tiempoSiguiente;
+            double demora;
+            double demoraSiguiente;
+            double hEuler;
+
+            hEuler = Convert.toDouble(txtHEuler.text);
+            */
+
+
+
+
             //int iteraciones = 
             //Dim iteraciones As New Integer
             //iteraciones = txtIteraciones.Text
@@ -141,6 +181,10 @@ namespace simulacion_tp5
             //cobro = txtCobro.Text
             //Dim contador As New Integer
             //contador = 0
+
+
+
+            dgvResultados.DefaultCellStyle.Format = "N2";
         }
 
 
